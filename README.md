@@ -67,11 +67,11 @@ An endless runner game where **milestones reveal my story** — the further you 
 
 | Project | Description | Stars |
 |---------|-------------|-------|
-| [**Open-ClaudeCode**](https://github.com/LING71671/Open-ClaudeCode) | ClaudeCode related repository — AI tooling & protocol extensions | ⭐ 275 |
-| [**ChaosCoder**](https://github.com/LING71671/ChaosCoder) | Code obfuscator that makes even God helpless — [Live Demo](https://chaos-coder-xi.vercel.app/) | ⭐ 20 |
-| [**Universal-AI-Protocol-Bridge**](https://github.com/LING71671/Universal-AI-Protocol-Bridge) | Connect and manage various AI protocols seamlessly | ⭐ 5 |
-| [**SMA-OS**](https://github.com/LING71671/SMA-OS) | High-performance, mathematically proven AI OS execution layer | ⭐ 2 |
-| [**Eliza**](https://github.com/LING71671/Eliza) | The world's first chatbot — recreated for the modern era | ⭐ 2 |
+| [**Open-ClaudeCode**](https://github.com/LING71671/Open-ClaudeCode) | ClaudeCode related repository — AI tooling & protocol extensions | ![Stars](https://img.shields.io/github/stars/LING71671/Open-ClaudeCode?style=social) |
+| [**ChaosCoder**](https://github.com/LING71671/ChaosCoder) | Code obfuscator that makes even God helpless — [Live Demo](https://chaos-coder-xi.vercel.app/) | ![Stars](https://img.shields.io/github/stars/LING71671/ChaosCoder?style=social) |
+| [**Universal-AI-Protocol-Bridge**](https://github.com/LING71671/Universal-AI-Protocol-Bridge) | Connect and manage various AI protocols seamlessly | ![Stars](https://img.shields.io/github/stars/LING71671/Universal-AI-Protocol-Bridge?style=social) |
+| [**SMA-OS**](https://github.com/LING71671/SMA-OS) | High-performance, mathematically proven AI OS execution layer | ![Stars](https://img.shields.io/github/stars/LING71671/SMA-OS?style=social) |
+| [**Eliza**](https://github.com/LING71671/Eliza) | The world's first chatbot — recreated for the modern era | ![Stars](https://img.shields.io/github/stars/LING71671/Eliza?style=social) |
 
 ---
 
