@@ -29,16 +29,17 @@ An endless runner game where **milestones reveal my story** — the further you 
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=LING71671&theme=tokyonight&show_icons=true&count_private=true&hide_border=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LING71671&theme=tokyonight&layout=compact&hide_border=true" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LING71671&theme=tokyonight" alt="Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=LING71671&theme=tokyonight" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=LING71671&theme=tokyonight&hide_border=true" alt="Streak Stats" />
+  <img src="https://streak-stats.demolab.com?user=LING71671&theme=tokyonight" alt="Streak Stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=LING71671&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=10" alt="Profile Trophy" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LING71671&theme=tokyonight" alt="Repos Per Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=LING71671&theme=tokyonight" alt="Productive Time" />
 </p>
 
 ---
