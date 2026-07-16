@@ -1,32 +1,29 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=600&lines=All+in+the+game+%F0%9F%8E%AE;Building+AI+tools...;TypeScript+%7C+Python+%7C+Go;Chaos+%E2%86%92+Code+%E2%9C%A8" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&duration=3000&pause=900&color=58A6FF&center=true&vCenter=true&width=680&lines=All+in+the+game.;Turning+chaos+into+code.;Still+building%2C+still+learning." alt="Typing SVG" />
+</p>
+
+<h1 align="center">Hi, I'm Ling</h1>
+
+<p align="center">
+  <i>All in the game, all in game.</i>
 </p>
 
 ---
 
-## 👋 Hi, I'm Ling
+## Things Around Here
 
-> **All in the game, all in game.**
-
-📍 Paradise &nbsp;|&nbsp; 🚀 Since 2025
-
-🔧 AI tooling enthusiast &nbsp;|&nbsp; Full-stack developer &nbsp;|&nbsp; Open-source builder
-
-Turning chaos into code, one commit at a time.
-
----
-
-## 🎮 Play & Learn About Me
-
-> Jump, dodge, and discover who I am as you play!
-
-[![Play Game](https://img.shields.io/badge/%F0%9F%8E%AE-Play%20Endless%20Runner-58A6FF?style=for-the-badge&logo=gamepad&logoColor=white)](https://LING71671.github.io/play/)
-
-An endless runner game where **milestones reveal my story** — the further you go, the more you learn about me. High difficulty, cyberpunk visuals, and a personal touch.
+| Project | What it is | Stars |
+| --- | --- | --- |
+| [**Open-ClaudeCode**](https://github.com/LING71671/Open-ClaudeCode) | A research archive reconstructed from published Claude Code npm source maps. | ![Stars](https://img.shields.io/github/stars/LING71671/Open-ClaudeCode?style=social) |
+| [**open-reverselab**](https://github.com/LING71671/open-reverselab) | An agent-native reverse-engineering lab with a knowledge base and MCP automation tools. | ![Stars](https://img.shields.io/github/stars/LING71671/open-reverselab?style=social) |
+| [**Universal-AI-Protocol-Bridge**](https://github.com/LING71671/Universal-AI-Protocol-Bridge) | A Cloudflare Workers gateway for translating and routing chat API protocols. | ![Stars](https://img.shields.io/github/stars/LING71671/Universal-AI-Protocol-Bridge?style=social) |
+| [**CyberSilenter**](https://github.com/LING71671/CyberSilenter) | A local Windows helper for ChatGPT Desktop UI automation. | ![Stars](https://img.shields.io/github/stars/LING71671/CyberSilenter?style=social) |
+| [**plugproxy**](https://github.com/LING71671/plugproxy) | A lightweight Go proxy collector, validator, pool, CLI, HTTP API, and SDK. | ![Stars](https://img.shields.io/github/stars/LING71671/plugproxy?style=social) |
+| [**Aegis-Watermark**](https://github.com/LING71671/Aegis-Watermark) | Blind watermarking and digital signatures for images, PDFs, and PPTX files. | ![Stars](https://img.shields.io/github/stars/LING71671/Aegis-Watermark?style=social) |
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LING71671&theme=tokyonight" alt="Stats" />
@@ -44,7 +41,7 @@ An endless runner game where **milestones reveal my story** — the further you 
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" />&nbsp;
@@ -58,49 +55,27 @@ An endless runner game where **milestones reveal my story** — the further you 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt="CSS3" />&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" alt="Git" />&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux" />&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux" />
 </p>
 
 ---
 
-## 🚀 Featured Projects
-
-| Project | Description | Stars |
-|---------|-------------|-------|
-| [**Open-ClaudeCode**](https://github.com/LING71671/Open-ClaudeCode) | ClaudeCode related repository — AI tooling & protocol extensions | ![Stars](https://img.shields.io/github/stars/LING71671/Open-ClaudeCode?style=social) |
-| [**ChaosCoder**](https://github.com/LING71671/ChaosCoder) | Code obfuscator that makes even God helpless — [Live Demo](https://chaos-coder-xi.vercel.app/) | ![Stars](https://img.shields.io/github/stars/LING71671/ChaosCoder?style=social) |
-| [**Universal-AI-Protocol-Bridge**](https://github.com/LING71671/Universal-AI-Protocol-Bridge) | Connect and manage various AI protocols seamlessly | ![Stars](https://img.shields.io/github/stars/LING71671/Universal-AI-Protocol-Bridge?style=social) |
-| [**SMA-OS**](https://github.com/LING71671/SMA-OS) | High-performance, mathematically proven AI OS execution layer | ![Stars](https://img.shields.io/github/stars/LING71671/SMA-OS?style=social) |
-| [**Eliza**](https://github.com/LING71671/Eliza) | The world's first chatbot — recreated for the modern era | ![Stars](https://img.shields.io/github/stars/LING71671/Eliza?style=social) |
-
----
-
-## 🔗 Connect With Me
+## Connect
 
 <p align="center">
-  <a href="https://github.com/LING71671" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="https://chaos-coder-xi.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+  <a href="mailto:lingmoumou53@gmail.com">
+    <img src="https://img.shields.io/badge/Email-lingmoumou53%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ling" />
   </a>
 </p>
 
-> 💡 *Want to collaborate or reach out? Feel free to open an issue on any of my repos or send me a message on GitHub!*
-
 ---
 
-## 🐍 Contribution Snake
-
-> ⚠️ *This animation is generated by a GitHub Action every 6 hours. It may take a moment to appear after the first run.*
+## Contribution Snake
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/LING71671/LING71671/output/github-contribution-grid-snake.svg" alt="Contribution Snake" />
 </p>
 
----
-
 <p align="center">
-  <em>Thanks for visiting! ⭐ if you like my work.</em>
+  <em>Thanks for visiting. Star something if it made your day easier.</em>
 </p>
-
