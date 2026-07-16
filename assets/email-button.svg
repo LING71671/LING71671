@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="58" viewBox="0 0 520 58" role="img" aria-labelledby="title desc">
+  <title id="title">Say hello to Ling</title>
+  <desc id="desc">Email Ling at lingmoumou53@gmail.com</desc>
+  <rect x="1" y="1" width="518" height="56" rx="10" fill="#FF8A4C" stroke="#F4C95D" stroke-width="2" />
+  <g fill="none" stroke="#111416" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="20" y="17" width="30" height="23" rx="3" />
+    <path d="M22 20L35 31L48 20" />
+  </g>
+  <text x="66" y="35" fill="#111416" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="17" font-weight="700">Say hello / 来聊聊</text>
+  <path d="M223 14V44" stroke="#111416" stroke-opacity="0.3" />
+  <text x="242" y="35" fill="#111416" font-family="Consolas, Menlo, monospace" font-size="16">lingmoumou53@gmail.com</text>
+  <path d="M488 23L495 29L488 35" fill="none" stroke="#111416" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
