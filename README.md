@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&duration=3000&pause=900&color=58A6FF&center=true&vCenter=true&width=680&lines=All+in+the+game.;Turning+chaos+into+code.;Still+building%2C+still+learning." alt="Typing SVG" />
+  <img src="./assets/profile-header.svg" alt="Ling — All in the game" width="100%" />
 </p>
 
 <h1 align="center">Hi, I'm Ling</h1>
@@ -10,7 +10,7 @@
 
 ---
 
-## Things Around Here
+## 01 / Projects
 
 | Project | What it is | Stars |
 | --- | --- | --- |
@@ -23,7 +23,7 @@
 
 ---
 
-## GitHub Stats
+## 02 / Activity Log
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LING71671&theme=tokyonight" alt="Stats" />
@@ -41,7 +41,7 @@
 
 ---
 
-## Tech Stack
+## 03 / Inventory
 
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" />&nbsp;
@@ -60,7 +60,7 @@
 
 ---
 
-## Connect
+## 04 / Find Me
 
 <p align="center">
   <a href="mailto:lingmoumou53@gmail.com">
@@ -70,7 +70,7 @@
 
 ---
 
-## Contribution Snake
+## End Credits
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/LING71671/LING71671/output/github-contribution-grid-snake.svg" alt="Contribution Snake" />
