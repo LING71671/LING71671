@@ -43,6 +43,21 @@
 
 ---
 
+## Sponsors / 赞助
+
+<p align="center">
+  <a href="https://sentry.io">
+    <img src="https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=white" alt="Sentry" />
+  </a>
+</p>
+
+<p align="center">
+  Thanks to all our sponsors. ❤️<br />
+  感谢所有赞助方。❤️
+</p>
+
+---
+
 ## Activity / 动态
 
 <p align="center">
