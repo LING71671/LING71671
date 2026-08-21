@@ -9,19 +9,6 @@
 
 ---
 
-## Projects / 项目
-
-| Project / 项目 | Notes / 简介 | Stars / 星标 |
-| --- | --- | --- |
-| [**Open-ClaudeCode**](https://github.com/LING71671/Open-ClaudeCode) | A research archive reconstructed from published Claude Code npm source maps.<br />从公开发布的 Claude Code npm source map 重建的研究资料归档。 | ![Stars](https://img.shields.io/github/stars/LING71671/Open-ClaudeCode?style=social) |
-| [**open-reverselab**](https://github.com/LING71671/open-reverselab) | An agent-native reverse-engineering lab with a knowledge base and MCP automation tools.<br />包含知识库与 MCP 自动化工具的智能体原生逆向工程实验室。 | ![Stars](https://img.shields.io/github/stars/LING71671/open-reverselab?style=social) |
-| [**Universal-AI-Protocol-Bridge**](https://github.com/LING71671/Universal-AI-Protocol-Bridge) | A Cloudflare Workers gateway for translating and routing chat API protocols.<br />运行在 Cloudflare Workers 上的聊天 API 协议转换与路由网关。 | ![Stars](https://img.shields.io/github/stars/LING71671/Universal-AI-Protocol-Bridge?style=social) |
-| [**CyberSilenter**](https://github.com/LING71671/CyberSilenter) | A local Windows helper for ChatGPT Desktop UI automation.<br />面向 ChatGPT Desktop 的 Windows 本地界面辅助工具。 | ![Stars](https://img.shields.io/github/stars/LING71671/CyberSilenter?style=social) |
-| [**plugproxy**](https://github.com/LING71671/plugproxy) | A lightweight Go proxy collector, validator, pool, CLI, HTTP API, and SDK.<br />轻量级 Go 代理采集、检测与代理池，提供 CLI、HTTP API 和 SDK。 | ![Stars](https://img.shields.io/github/stars/LING71671/plugproxy?style=social) |
-| [**Aegis-Watermark**](https://github.com/LING71671/Aegis-Watermark) | Blind watermarking and digital signatures for images, PDFs, and PPTX files.<br />面向图片、PDF 与 PPTX 的盲水印和数字签名工具。 | ![Stars](https://img.shields.io/github/stars/LING71671/Aegis-Watermark?style=social) |
-
----
-
 ## Say hello / 来聊聊
 
 <p align="center">
