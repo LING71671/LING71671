@@ -5,6 +5,7 @@
 // Usage: node .github/scripts/build-activity-card.mjs  (writes dist/activity-card.svg)
 
 import { mkdir, writeFile } from "node:fs/promises";
+import { dirname } from "node:path";
 
 const USER = process.env.STATS_USER || "LING71671";
 const TOKEN = process.env.GITHUB_TOKEN || "";
@@ -127,7 +128,7 @@ ${row(166, repo, "Public Repos", fmt(stats.repos))}
 
 const stats = await getStats();
 const streak = await getStreak();
-await mkdir("dist", { recursive: true });
+await mkdir(dirname(OUT), { recursive: true });
 await writeFile(OUT, statCard({ stats, streak }));
 console.log(`wrote ${OUT}`);
 console.log(JSON.stringify({ stats, streak }, null, 2));

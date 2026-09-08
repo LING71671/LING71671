@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Generate Profile Graphics
 
 on:
   schedule:
@@ -20,6 +20,18 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build activity card SVG
+        run: node .github/scripts/build-activity-card.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUT_FILE: dist/stats/activity-card.svg
+
+      # single deploy: ghaction-github-pages force-pushes build_dir as the
+      # branch root, so everything on output must come from this one dist
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
