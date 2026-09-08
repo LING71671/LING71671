@@ -41,8 +41,7 @@
 </picture>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LING71671&theme=gruvbox" height="195" alt="GitHub stats: total stars, commits, PRs / 星标、提交与 PR 统计" />
-  <img src="https://streak-stats.demolab.com?user=LING71671&theme=gruvbox" height="195" alt="GitHub contribution streak / 连续提交天数" />
+  <img src="https://raw.githubusercontent.com/LING71671/LING71671/output/stats/activity-card.svg" width="880" alt="Activity: stars, commits, PRs, issues, repos and contribution streaks / 星标、提交、PR、Issue、仓库数与连续贡献" />
 </p>
 
 <p align="center">
