@@ -2,14 +2,11 @@
   <img src="./assets/profile-header.svg" alt="Ling personal workspace / Ling 的个人工作台" width="100%" />
 </p>
 
-<p align="center">
-  A collection of tools, experiments, systems, and half-finished ideas.<br />
-  这里放着一些工具、实验、系统，以及还没想完的点子。
-</p>
-
----
-
-## Projects / 项目
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-projects.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-projects-light.svg" />
+  <img src="./assets/header-projects.svg" alt="Projects / 项目" width="100%" />
+</picture>
 
 | Project / 项目 | Notes / 简介 | Stars / 星标 |
 | --- | --- | --- |
@@ -20,9 +17,11 @@
 | [**plugproxy**](https://github.com/LING71671/plugproxy) | A lightweight Go proxy collector, validator, pool, CLI, HTTP API, and SDK.<br />轻量级 Go 代理采集、检测与代理池，提供 CLI、HTTP API 和 SDK。 | ![Stars](https://img.shields.io/github/stars/LING71671/plugproxy?style=social) |
 | [**Aegis-Watermark**](https://github.com/LING71671/Aegis-Watermark) | Blind watermarking and digital signatures for images, PDFs, and PPTX files.<br />面向图片、PDF 与 PPTX 的盲水印和数字签名工具。 | ![Stars](https://img.shields.io/github/stars/LING71671/Aegis-Watermark?style=social) |
 
----
-
-## Say hello / 来聊聊
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-contact.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-contact-light.svg" />
+  <img src="./assets/header-contact.svg" alt="Say hello / 来聊聊" width="100%" />
+</picture>
 
 <p align="center">
   Have an idea worth talking about? Email me.<br />
@@ -35,49 +34,10 @@
   </a>
 </p>
 
----
-
-## Activity / 动态
-
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LING71671&theme=tokyonight" alt="GitHub stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=LING71671&theme=tokyonight" alt="Top languages" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=LING71671&theme=tokyonight" alt="GitHub streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=LING71671&theme=tokyonight" alt="Repositories per language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=LING71671&theme=tokyonight" alt="Productive time" />
-</p>
-
----
-
-## Toolbox / 工具箱
-
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40" alt="TypeScript" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40" alt="Python" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" width="40" height="40" alt="Go" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40" alt="Java" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="40" height="40" alt="Vue" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="Node.js" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="HTML5" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt="CSS3" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" alt="Git" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40" alt="Docker" />&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="40" height="40" alt="Linux" />
-</p>
-
----
-
-## Contributions / 贡献
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/LING71671/LING71671/output/github-contribution-grid-snake.svg" alt="Contribution snake / 贡献贪吃蛇" />
+  <a href="https://sentry.io">
+    <img src="./assets/sponsor-strip.svg" alt="Sponsored by Sentry / 感谢 Sentry 与所有赞助方" width="100%" />
+  </a>
 </p>
 
 <p align="center">

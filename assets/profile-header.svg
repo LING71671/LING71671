@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
   <title id="title">Ling personal workspace</title>
-  <desc id="desc">A lively dark workspace banner with tangerine typography, golden warmth, teal details, and a bilingual contact terminal.</desc>
+  <desc id="desc">A lively dark workspace banner with tangerine typography, golden warmth, teal signal details, and a bilingual contact terminal.</desc>
 
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -18,16 +18,32 @@
     <circle cx="1112" cy="42" r="142" fill="#243A34" />
     <path d="M1020 0H1200V184Z" fill="#4A2B1B" />
     <circle cx="1136" cy="22" r="54" fill="#F4C95D" />
+    <circle cx="1136" cy="22" r="72" fill="none" stroke="#F4C95D" stroke-width="2" stroke-opacity="0.45" />
+    <circle cx="1052" cy="118" r="5" fill="#FF8A4C" />
+
+    <!-- signal equalizer marks between name and terminal -->
+    <g rx="2">
+      <rect x="612" y="96" width="7" height="30" rx="2" fill="#4FC1A8" />
+      <rect x="626" y="82" width="7" height="44" rx="2" fill="#F4C95D" />
+      <rect x="640" y="104" width="7" height="22" rx="2" fill="#FF8A4C" />
+    </g>
+    <path d="M618 156h24M630 144v24" stroke="#B9C4BF" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" />
+
+    <!-- traveling signal line along the bottom -->
+    <path d="M72 296 L208 296 L224 284 L372 284 L388 296 L560 296" fill="none" stroke="#4FC1A8" stroke-width="2" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="72" cy="296" r="4" fill="#4FC1A8" />
+    <circle cx="372" cy="284" r="4" fill="#F4C95D" />
+    <circle cx="560" cy="296" r="4" fill="#FF8A4C" />
   </g>
 
   <rect x="1" y="1" width="1198" height="318" rx="15" fill="none" stroke="#5E4638" stroke-width="2" />
 
   <g font-family="Trebuchet MS, Arial, sans-serif">
     <text x="72" y="62" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="18">Ling · personal workspace / 个人工作台</text>
-    <text x="66" y="160" fill="#FF8A4C" font-size="96" font-weight="800" letter-spacing="1">LING</text>
+    <text x="68" y="160" fill="#FF8A4C" font-size="96" font-weight="800" letter-spacing="-1">LING</text>
     <path d="M72 180H388" stroke="#F4C95D" stroke-width="6" stroke-linecap="round" />
-    <text x="72" y="222" fill="#FFF4E6" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-style="italic">All in the game, all in game.</text>
-    <text x="72" y="272" fill="#8FD7C5" font-size="16">tools  ·  experiments  ·  systems  ·  odd ideas</text>
+    <text x="72" y="222" fill="#FFF4E6" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-style="italic">Build useful things. Stay curious.</text>
+    <text x="72" y="262" fill="#8FD7C5" font-size="16">tools  ·  experiments  ·  systems  ·  odd ideas</text>
   </g>
 
   <g transform="translate(744 54)">

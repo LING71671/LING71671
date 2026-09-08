@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="96" viewBox="0 0 1200 96" role="img" aria-labelledby="title desc">
+  <title id="title">Sponsored by Sentry</title>
+  <desc id="desc">Thanks to Sentry and all our sponsors. / 感谢 Sentry 与所有赞助方。</desc>
+
+  <defs>
+    <clipPath id="frame">
+      <rect width="1200" height="96" rx="16" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="96" fill="#111416" />
+    <path d="M1052 0H1200V96H1104Z" fill="#17302B" />
+    <circle cx="1176" cy="14" r="34" fill="#F4C95D" />
+  </g>
+
+  <rect x="1" y="1" width="1198" height="94" rx="15" fill="none" stroke="#5E4638" stroke-width="2" />
+
+  <g transform="translate(52 25) scale(1.9)">
+    <path fill="#FFF4E6" d="M13.91 2.505c-.873-1.448-2.972-1.448-3.844 0L6.904 7.92a15.478 15.478 0 0 1 8.53 12.811h-2.221A13.301 13.301 0 0 0 5.784 9.814l-2.926 5.06a7.65 7.65 0 0 1 4.435 5.848H2.194a.365.365 0 0 1-.298-.534l1.413-2.402a5.16 5.16 0 0 0-1.614-.913L.296 19.275a2.182 2.182 0 0 0 .812 2.999 2.24 2.24 0 0 0 1.086.288h6.983a9.322 9.322 0 0 0-3.845-8.318l1.11-1.922a11.47 11.47 0 0 1 4.95 10.24h5.915a17.242 17.242 0 0 0-7.885-15.28l2.244-3.845a.37.37 0 0 1 .504-.13c.255.14 9.75 16.708 9.928 16.9a.365.365 0 0 1-.327.543h-2.287c.029.612.029 1.223 0 1.831h2.297a2.206 2.206 0 0 0 1.922-3.31z"/>
+  </g>
+
+  <text x="120" y="60" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="26" font-weight="700">Sentry</text>
+
+  <path d="M228 28V68" stroke="#5E4638" stroke-width="2" />
+
+  <text x="256" y="44" fill="#FFF4E6" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="18">Thanks to Sentry and all our sponsors.</text>
+  <text x="256" y="70" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="16">感谢 Sentry 与所有赞助方。</text>
+</svg>
