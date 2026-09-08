@@ -34,6 +34,25 @@
   </a>
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-activity.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/header-activity-light.svg" />
+  <img src="./assets/header-activity.svg" alt="Activity / 动态" width="100%" />
+</picture>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=LING71671&theme=gruvbox" alt="GitHub stats: total stars, commits, PRs / 星标、提交与 PR 统计" />
+  <img src="https://streak-stats.demolab.com?user=LING71671&theme=gruvbox" alt="GitHub contribution streak / 连续提交天数" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/LING71671/LING71671/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/LING71671/LING71671/output/github-contribution-grid-snake.svg" />
+    <img src="https://raw.githubusercontent.com/LING71671/LING71671/output/github-contribution-grid-snake.svg" alt="Contribution snake / 贡献贪吃蛇" />
+  </picture>
+</p>
+
 <p align="center">
   <a href="https://sentry.io">
     <img src="./assets/sponsor-strip.svg" alt="Sponsored by Sentry / 感谢 Sentry 与所有赞助方" width="100%" />
