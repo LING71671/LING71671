@@ -13,13 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: platane/snk@v3
-        with:
-          github_user_name: LING71671
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
+      # card first: it writes dist/ as the runner user; snk runs in Docker as
+      # root and would make dist/ unwritable if it created the directory first
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -29,6 +24,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OUT_FILE: dist/stats/activity-card.svg
+
+      - uses: platane/snk@v3
+        with:
+          github_user_name: LING71671
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       # single deploy: ghaction-github-pages force-pushes build_dir as the
       # branch root, so everything on output must come from this one dist
