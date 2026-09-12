@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub activity for LING71671</title>
+  <desc id="desc">Stars 2165, commits 1551, pull requests 139, issues 161, public repos 28. Total contributions 1,624 (Sep 9, 2025 - Present), current streak 7 (Sep 6 - Sep 12), longest streak 48 (May 26 - Jul 12).</desc>
+
+  <defs>
+    <clipPath id="frame"><rect width="880" height="200" rx="16" /></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="880" height="200" fill="#111416" />
+    <path d="M772 0H880V200H826Z" fill="#17302B" />
+    <circle cx="866" cy="14" r="30" fill="#F4C95D" />
+    <circle cx="866" cy="14" r="40" fill="none" stroke="#F4C95D" stroke-width="1.5" stroke-opacity="0.4" />
+  </g>
+
+  <rect x="1" y="1" width="878" height="198" rx="15" fill="none" stroke="#5E4638" stroke-width="2" />
+
+  <g transform="translate(0 38)">
+    <path d="M40-7 41.8-2.4 46.7-2.2 42.7 0.9 44.2 5.8 40 2.8 35.8 5.8 37.3 0.9 33.3-2.2 38.2-2.4Z" fill="none" stroke="#F4C95D" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="68" y="5" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="15">Total Stars</text>
+    <text x="404" y="5" text-anchor="end" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="700">2.2k</text>
+  </g>
+  <g transform="translate(0 70)">
+    <circle cx="40" cy="0" r="3.4" fill="none" stroke="#4FC1A8" stroke-width="1.8"/><path d="M31 0h5.6M43.4 0H49" stroke="#4FC1A8" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="68" y="5" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="15">Total Commits</text>
+    <text x="404" y="5" text-anchor="end" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="700">1.6k</text>
+  </g>
+  <g transform="translate(0 102)">
+    <g fill="none" stroke="#FF8A4C" stroke-width="1.8"><circle cx="36.5" cy="-4.5" r="2.2"/><circle cx="36.5" cy="4.5" r="2.2"/><circle cx="43.5" cy="-4.5" r="2.2"/><path d="M36.5-2.3V2.3M43.5-2.3C43.5 1 36.5 0 36.5 2.3"/></g>
+    <text x="68" y="5" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="15">Pull Requests</text>
+    <text x="404" y="5" text-anchor="end" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="700">139</text>
+  </g>
+  <g transform="translate(0 134)">
+    <circle cx="40" cy="0" r="5.4" fill="none" stroke="#FFF4E6" stroke-width="1.8"/><circle cx="40" cy="0" r="1.3" fill="#FFF4E6"/>
+    <text x="68" y="5" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="15">Issues</text>
+    <text x="404" y="5" text-anchor="end" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="700">161</text>
+  </g>
+  <g transform="translate(0 166)">
+    <path d="M34-4H39L41-2H46V5H34Z" fill="none" stroke="#B9C4BF" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="68" y="5" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="15">Public Repos</text>
+    <text x="404" y="5" text-anchor="end" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="700">28</text>
+  </g>
+
+  <path d="M440 28V172" stroke="#5E4638" stroke-width="2" />
+
+  <g text-anchor="middle">
+    <text x="536" y="94" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="800">1,624</text>
+    <text x="536" y="126" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="14">Total / 总计</text>
+    <text x="536" y="152" fill="#87948F" font-family="Segoe UI, Arial, sans-serif" font-size="12">Sep 9, 2025 - Present</text>
+
+    <circle cx="664" cy="84" r="37" fill="none" stroke="#F4C95D" stroke-width="3" />
+    <text x="664" y="95" fill="#FF8A4C" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="800">7</text>
+    <text x="664" y="140" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="14">Current / 当前</text>
+    <text x="664" y="164" fill="#87948F" font-family="Segoe UI, Arial, sans-serif" font-size="12">Sep 6 - Sep 12</text>
+
+    <text x="790" y="94" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="800">48</text>
+    <text x="790" y="126" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="14">Longest / 最长</text>
+    <text x="790" y="152" fill="#87948F" font-family="Segoe UI, Arial, sans-serif" font-size="12">May 26 - Jul 12</text>
+  </g>
+</svg>
