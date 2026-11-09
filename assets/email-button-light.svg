@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="40" viewBox="0 0 480 40" role="img" aria-labelledby="title desc">
+  <title id="title">Contact Ling</title>
+  <desc id="desc">Send correspondence to belloshehubz@gmail.com</desc>
+
+  <!-- Light Newsprint Paper Surface -->
+  <rect x="0.5" y="0.5" width="479" height="39" rx="3" fill="#F4F1EA" stroke="#D5CFC2" stroke-width="1" />
+
+  <!-- Telegraph / Mail Icon -->
+  <g transform="translate(20, 13)" fill="none" stroke="#111215" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="17" height="13" rx="1.5" />
+    <path d="M1.5 2.5l7 5 7-5" />
+  </g>
+
+  <!-- Dispatch Marker -->
+  <text x="48" y="24.5" fill="#666158" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif" font-size="10.5" font-weight="400" letter-spacing="1.5">CORRESPONDENCE</text>
+
+  <!-- Hairline Divider -->
+  <path d="M178 12v16" stroke="#D5CFC2" stroke-width="0.75" />
+
+  <!-- Email Address -->
+  <text x="194" y="24.5" fill="#111215" font-family="'Palatino Linotype', 'Book Antiqua', 'Georgia', serif" font-size="13.5" font-weight="400" letter-spacing="0.4">belloshehubz@gmail.com</text>
+
+  <!-- Editorial Arrow -->
+  <path d="M448 23l4.5-4.5m0 0h-4m4 0v4" fill="none" stroke="#666158" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

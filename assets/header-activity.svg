@@ -1,12 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="76" viewBox="0 0 1200 76" role="img" aria-labelledby="title">
-  <title id="title">Activity / 动态</title>
-  <g>
-    <rect x="4" y="26" width="8" height="22" rx="2" fill="#4FC1A8" />
-    <rect x="18" y="14" width="8" height="34" rx="2" fill="#F4C95D" />
-    <rect x="32" y="32" width="8" height="16" rx="2" fill="#FF8A4C" />
-  </g>
-  <text x="60" y="48" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">Activity</text>
-  <text x="212" y="45" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="20">/ 动态</text>
-  <path d="M320 38H1168" stroke="#5E4638" stroke-width="2" stroke-linecap="round" />
-  <circle cx="1180" cy="38" r="4" fill="#F4C95D" />
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="34" viewBox="0 0 880 34" role="img" aria-labelledby="title">
+  <title id="title">Activity Ledger / 动态清单</title>
+
+  <!-- Left Section Marker -->
+  <text x="0" y="21" fill="#7E7A72" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif" font-size="10" font-weight="400" letter-spacing="2">PUBLIC RECORD</text>
+
+  <!-- Left Hairline Rule -->
+  <path d="M110 17H340" stroke="#25262D" stroke-width="0.75" />
+
+  <!-- Center Heading with Songti fallback for CJK -->
+  <text x="440" y="21" text-anchor="middle" fill="#F4F0E8" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', 'Songti SC', 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', 'STSong', serif" font-size="13.5" font-weight="400" letter-spacing="2.5">ACTIVITY LEDGER · 动态总账</text>
+
+  <!-- Right Hairline Rule -->
+  <path d="M540 17H780" stroke="#25262D" stroke-width="0.75" />
+
+  <!-- Right Record Marker -->
+  <text x="880" y="21" text-anchor="end" fill="#7E7A72" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif" font-size="10" font-weight="400" letter-spacing="2">2024–2026</text>
 </svg>

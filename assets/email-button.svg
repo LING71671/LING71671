@@ -1,13 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="58" viewBox="0 0 520 58" role="img" aria-labelledby="title desc">
-  <title id="title">Say hello to Ling</title>
-  <desc id="desc">Email Ling at lingmoumou53@gmail.com</desc>
-  <rect x="1" y="1" width="518" height="56" rx="10" fill="#FF8A4C" stroke="#F4C95D" stroke-width="2" />
-  <g fill="none" stroke="#111416" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="20" y="17" width="30" height="23" rx="3" />
-    <path d="M22 20L35 31L48 20" />
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="40" viewBox="0 0 480 40" role="img" aria-labelledby="title desc">
+  <title id="title">Contact Ling</title>
+  <desc id="desc">Send correspondence to belloshehubz@gmail.com</desc>
+
+  <!-- Light Newsprint Paper Surface -->
+  <rect x="0.5" y="0.5" width="479" height="39" rx="3" fill="#F4F1EA" stroke="#D5CFC2" stroke-width="1" />
+
+  <!-- Telegraph / Mail Icon -->
+  <g transform="translate(20, 13)" fill="none" stroke="#111215" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="17" height="13" rx="1.5" />
+    <path d="M1.5 2.5l7 5 7-5" />
   </g>
-  <text x="66" y="35" fill="#111416" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="17" font-weight="700">Say hello / 来聊聊</text>
-  <path d="M223 14V44" stroke="#111416" stroke-opacity="0.3" />
-  <text x="242" y="35" fill="#111416" font-family="Consolas, Menlo, monospace" font-size="16">lingmoumou53@gmail.com</text>
-  <path d="M488 23L495 29L488 35" fill="none" stroke="#111416" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Dispatch Marker -->
+  <text x="48" y="24.5" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="10.5" letter-spacing="1.5">CORRESPONDENCE</text>
+
+  <!-- Hairline Divider -->
+  <path d="M178 12v16" stroke="#D5CFC2" stroke-width="0.75" />
+
+  <!-- Email Address -->
+  <text x="194" y="24.5" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="13.5" letter-spacing="0.4">belloshehubz@gmail.com</text>
+
+  <!-- Editorial Arrow -->
+  <path d="M448 23l4.5-4.5m0 0h-4m4 0v4" fill="none" stroke="#666158" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
 </svg>

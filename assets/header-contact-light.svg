@@ -1,12 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="76" viewBox="0 0 1200 76" role="img" aria-labelledby="title">
-  <title id="title">Say hello / 来聊聊</title>
-  <g>
-    <rect x="4" y="26" width="8" height="22" rx="2" fill="#4FC1A8" />
-    <rect x="18" y="14" width="8" height="34" rx="2" fill="#F4C95D" />
-    <rect x="32" y="32" width="8" height="16" rx="2" fill="#FF8A4C" />
-  </g>
-  <text x="60" y="48" fill="#111416" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">Say hello</text>
-  <text x="228" y="45" fill="#6B5744" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="20">/ 来聊聊</text>
-  <path d="M336 38H1168" stroke="#D8C6B4" stroke-width="2" stroke-linecap="round" />
-  <circle cx="1180" cy="38" r="4" fill="#E56A2E" />
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="34" viewBox="0 0 880 34" role="img" aria-labelledby="title">
+  <title id="title">Correspondence / 来信交流</title>
+
+  <!-- Left Section Marker -->
+  <text x="0" y="21" fill="#847E74" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif" font-size="10" font-weight="400" letter-spacing="2">DISPATCH</text>
+
+  <!-- Left Hairline Rule -->
+  <path d="M90 17H340" stroke="#D5CFC2" stroke-width="0.75" />
+
+  <!-- Center Heading with Songti fallback for CJK -->
+  <text x="440" y="21" text-anchor="middle" fill="#111215" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', 'Songti SC', 'Source Han Serif SC', 'Noto Serif SC', 'SimSun', 'STSong', serif" font-size="13.5" font-weight="400" letter-spacing="2.5">CORRESPONDENCE · 来信交流</text>
+
+  <!-- Right Hairline Rule -->
+  <path d="M540 17H800" stroke="#D5CFC2" stroke-width="0.75" />
+
+  <!-- Right Record Marker -->
+  <text x="880" y="21" text-anchor="end" fill="#847E74" font-family="'Didot', 'Bodoni MT', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif" font-size="10" font-weight="400" letter-spacing="2">DESK</text>
 </svg>

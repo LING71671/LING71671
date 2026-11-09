@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="210" viewBox="0 0 880 210" role="img" aria-labelledby="title desc">
+  <title id="title">Ling</title>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。</desc>
+
+  <defs>
+    <clipPath id="paperFrame">
+      <rect width="880" height="210" rx="3" />
+    </clipPath>
+  </defs>
+
+  <!-- Physical Newsprint Paper Surface (Warm Newsprint Cream) -->
+  <g clip-path="url(#paperFrame)">
+    <rect width="880" height="210" fill="#F4F1EA" />
+    <rect width="880" height="210" fill="#000000" fill-opacity="0.015" />
+  </g>
+
+  <!-- Clean Delicate Hairline Borders -->
+  <rect x="0.5" y="0.5" width="879" height="209" rx="2.5" fill="none" stroke="#D5CFC2" stroke-width="1" />
+  <rect x="4.5" y="4.5" width="871" height="201" rx="1.5" fill="none" stroke="#E6E0D4" stroke-width="0.75" />
+
+  <!-- Broadsheet Folio Line (Thin Serif / Editorial Markers) -->
+  <text x="24" y="24" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">VOL. 2026 · ISSUE № 01</text>
+  <text x="440" y="24" text-anchor="middle" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">AUTONOMOUS SYSTEMS &amp; INTERACTIVE TOOLS</text>
+  <text x="856" y="24" text-anchor="end" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">GITHUB / LING71671</text>
+
+  <!-- Top Double Rules -->
+  <path d="M20 33H860" stroke="#16171A" stroke-width="1" />
+  <path d="M20 36H860" stroke="#A8A398" stroke-width="0.75" />
+
+  <!-- Newspaper Masthead (Refined Thin Serif) -->
+  <text x="448" y="106" text-anchor="middle" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="74" font-weight="300" letter-spacing="16">LING</text>
+
+  <!-- Bottom Double Rules -->
+  <path d="M20 126H860" stroke="#A8A398" stroke-width="0.75" />
+  <path d="M20 129H860" stroke="#16171A" stroke-width="1" />
+
+  <!-- Refined Thin Headline & Songti Companion -->
+  <g text-anchor="middle">
+    <text x="440" y="165" fill="#1A1B1F" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="18" font-style="italic" letter-spacing="1">“Build useful things. Stay curious.”</text>
+    <text x="440" y="190" fill="#666158" font-family="SimSun, Songti SC, Source Han Serif SC, Noto Serif SC, Microsoft YaHei, serif" font-size="12.5" letter-spacing="3">保持好奇，构建所思。</text>
+  </g>
+</svg>

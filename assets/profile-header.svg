@@ -1,69 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-  <title id="title">Ling personal workspace</title>
-  <desc id="desc">A lively dark workspace banner with tangerine typography, golden warmth, teal signal details, and a bilingual contact terminal.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="210" viewBox="0 0 880 210" role="img" aria-labelledby="title desc">
+  <title id="title">Ling</title>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。</desc>
 
   <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#202628" stroke-width="1" />
-    </pattern>
-    <clipPath id="frame">
-      <rect width="1200" height="320" rx="16" />
+    <clipPath id="paperFrame">
+      <rect width="880" height="210" rx="3" />
     </clipPath>
   </defs>
 
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="320" fill="#111416" />
-    <rect width="1200" height="320" fill="url(#grid)" />
-    <path d="M842 0H1200V320H978Z" fill="#17302B" />
-    <circle cx="1112" cy="42" r="142" fill="#243A34" />
-    <path d="M1020 0H1200V184Z" fill="#4A2B1B" />
-    <circle cx="1136" cy="22" r="54" fill="#F4C95D" />
-    <circle cx="1136" cy="22" r="72" fill="none" stroke="#F4C95D" stroke-width="2" stroke-opacity="0.45" />
-    <circle cx="1052" cy="118" r="5" fill="#FF8A4C" />
-
-    <!-- signal equalizer marks between name and terminal -->
-    <g rx="2">
-      <rect x="612" y="96" width="7" height="30" rx="2" fill="#4FC1A8" />
-      <rect x="626" y="82" width="7" height="44" rx="2" fill="#F4C95D" />
-      <rect x="640" y="104" width="7" height="22" rx="2" fill="#FF8A4C" />
-    </g>
-    <path d="M618 156h24M630 144v24" stroke="#B9C4BF" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" />
-
-    <!-- traveling signal line along the bottom -->
-    <path d="M72 296 L208 296 L224 284 L372 284 L388 296 L560 296" fill="none" stroke="#4FC1A8" stroke-width="2" stroke-opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="72" cy="296" r="4" fill="#4FC1A8" />
-    <circle cx="372" cy="284" r="4" fill="#F4C95D" />
-    <circle cx="560" cy="296" r="4" fill="#FF8A4C" />
+  <!-- Physical Newsprint Paper Surface (Warm Newsprint Cream) -->
+  <g clip-path="url(#paperFrame)">
+    <rect width="880" height="210" fill="#F4F1EA" />
+    <rect width="880" height="210" fill="#000000" fill-opacity="0.015" />
   </g>
 
-  <rect x="1" y="1" width="1198" height="318" rx="15" fill="none" stroke="#5E4638" stroke-width="2" />
+  <!-- Clean Delicate Hairline Borders -->
+  <rect x="0.5" y="0.5" width="879" height="209" rx="2.5" fill="none" stroke="#D5CFC2" stroke-width="1" />
+  <rect x="4.5" y="4.5" width="871" height="201" rx="1.5" fill="none" stroke="#E6E0D4" stroke-width="0.75" />
 
-  <g font-family="Trebuchet MS, Arial, sans-serif">
-    <text x="72" y="62" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="18">Ling · personal workspace / 个人工作台</text>
-    <text x="68" y="160" fill="#FF8A4C" font-size="96" font-weight="800" letter-spacing="-1">LING</text>
-    <path d="M72 180H388" stroke="#F4C95D" stroke-width="6" stroke-linecap="round" />
-    <text x="72" y="222" fill="#FFF4E6" font-family="Georgia, 'Times New Roman', serif" font-size="23" font-style="italic">Build useful things. Stay curious.</text>
-    <text x="72" y="262" fill="#8FD7C5" font-size="16">tools  ·  experiments  ·  systems  ·  odd ideas</text>
-  </g>
+  <!-- Broadsheet Folio Line (Thin Serif / Editorial Markers) -->
+  <text x="24" y="24" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">VOL. 2026 · ISSUE № 01</text>
+  <text x="440" y="24" text-anchor="middle" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">AUTONOMOUS SYSTEMS &amp; INTERACTIVE TOOLS</text>
+  <text x="856" y="24" text-anchor="end" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">GITHUB / LING71671</text>
 
-  <g transform="translate(744 54)">
-    <rect width="382" height="214" rx="12" fill="#1B2021" stroke="#3B7C70" stroke-width="2" />
-    <path d="M12 0H370A12 12 0 0 1 382 12V40H0V12A12 12 0 0 1 12 0Z" fill="#252B2B" />
-    <path d="M0 40H382" stroke="#3B7C70" />
-    <circle cx="22" cy="20" r="5" fill="#FF8A4C" />
-    <circle cx="40" cy="20" r="5" fill="#F4C95D" />
-    <circle cx="58" cy="20" r="5" fill="#4FC1A8" />
-    <text x="80" y="25" fill="#B9C4BF" font-family="Consolas, Menlo, monospace" font-size="13">hello@ling</text>
+  <!-- Top Double Rules -->
+  <path d="M20 33H860" stroke="#16171A" stroke-width="1" />
+  <path d="M20 36H860" stroke="#A8A398" stroke-width="0.75" />
 
-    <g font-family="Consolas, 'Microsoft YaHei', Menlo, monospace" font-size="16">
-      <text x="24" y="76" fill="#4FC1A8">&gt;</text>
-      <text x="48" y="76" fill="#FFF4E6">status</text>
-      <text x="24" y="106" fill="#FF8A4C">open to ideas &amp; collaboration</text>
-      <text x="24" y="134" fill="#FFF4E6" font-family="Segoe UI, 'Microsoft YaHei', sans-serif">欢迎交流与合作</text>
-      <text x="24" y="168" fill="#4FC1A8">&gt;</text>
-      <text x="48" y="168" fill="#FFF4E6">contact</text>
-      <text x="24" y="198" fill="#F4C95D">lingmoumou53@gmail.com</text>
-      <rect x="244" y="184" width="8" height="17" fill="#4FC1A8" />
-    </g>
+  <!-- Newspaper Masthead (Refined Thin Serif) -->
+  <text x="448" y="106" text-anchor="middle" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="74" font-weight="300" letter-spacing="16">LING</text>
+
+  <!-- Bottom Double Rules -->
+  <path d="M20 126H860" stroke="#A8A398" stroke-width="0.75" />
+  <path d="M20 129H860" stroke="#16171A" stroke-width="1" />
+
+  <!-- Refined Thin Headline & Songti Companion -->
+  <g text-anchor="middle">
+    <text x="440" y="165" fill="#1A1B1F" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="18" font-style="italic" letter-spacing="1">“Build useful things. Stay curious.”</text>
+    <text x="440" y="190" fill="#666158" font-family="SimSun, Songti SC, Source Han Serif SC, Noto Serif SC, Microsoft YaHei, serif" font-size="12.5" letter-spacing="3">保持好奇，构建所思。</text>
   </g>
 </svg>

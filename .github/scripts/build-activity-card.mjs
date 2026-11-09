@@ -1,8 +1,8 @@
-// Generates assets for the profile "Activity" section as a single authored SVG
-// panel in the Signal Workbench design system. Data: GitHub REST (stars,
-// commits, PRs, issues, repos) + streak figures parsed from the public
-// streak-stats SVG (same numbers the profile already shows).
-// Usage: node .github/scripts/build-activity-card.mjs  (writes dist/activity-card.svg)
+// Generates assets for the profile "Activity" section as authored SVG
+// panels in the Newspaper Broadsheet design system.
+// Defaults to the light newsprint paper aesthetic (#F4F1EA) per user instruction.
+// Data: GitHub REST (stars, commits, PRs, issues, repos) + streak figures.
+// Usage: node .github/scripts/build-activity-card.mjs
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
@@ -68,60 +68,113 @@ async function getStreak() {
   return { total, totalRange, current, currentRange, longest, longestRange };
 }
 
-function row(y, icon, label, value) {
+function row(y, icon, label, value, colors) {
   return `  <g transform="translate(0 ${y})">
     ${icon}
-    <text x="68" y="5" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="15">${label}</text>
-    <text x="404" y="5" text-anchor="end" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="18" font-weight="700">${value}</text>
+    <text x="56" y="5" fill="${colors.rowLabel}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">${label}</text>
+    <path d="M185 1H350" stroke="${colors.leader}" stroke-width="0.75" stroke-dasharray="2 4" />
+    <text x="408" y="5" text-anchor="end" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">${value}</text>
   </g>`;
 }
 
-function statCard({ stats, streak }) {
-  const star = `<path d="M40-7 41.8-2.4 46.7-2.2 42.7 0.9 44.2 5.8 40 2.8 35.8 5.8 37.3 0.9 33.3-2.2 38.2-2.4Z" fill="none" stroke="#F4C95D" stroke-width="1.8" stroke-linejoin="round"/>`;
-  const commit = `<circle cx="40" cy="0" r="3.4" fill="none" stroke="#4FC1A8" stroke-width="1.8"/><path d="M31 0h5.6M43.4 0H49" stroke="#4FC1A8" stroke-width="1.8" stroke-linecap="round"/>`;
-  const pr = `<g fill="none" stroke="#FF8A4C" stroke-width="1.8"><circle cx="36.5" cy="-4.5" r="2.2"/><circle cx="36.5" cy="4.5" r="2.2"/><circle cx="43.5" cy="-4.5" r="2.2"/><path d="M36.5-2.3V2.3M43.5-2.3C43.5 1 36.5 0 36.5 2.3"/></g>`;
-  const issue = `<circle cx="40" cy="0" r="5.4" fill="none" stroke="#FFF4E6" stroke-width="1.8"/><circle cx="40" cy="0" r="1.3" fill="#FFF4E6"/>`;
-  const repo = `<path d="M34-4H39L41-2H46V5H34Z" fill="none" stroke="#B9C4BF" stroke-width="1.8" stroke-linejoin="round"/>`;
+function statCard({ stats, streak, theme = "light" }) {
+  const isLight = theme === "light";
+  const colors = isLight
+    ? {
+        bg: "#F4F1EA",
+        bgOverlay: "rgba(0, 0, 0, 0.015)",
+        borderOuter: "#D5CFC2",
+        borderInner: "#E6E0D4",
+        rule: "#D5CFC2",
+        ruleMuted: "#E6E0D4",
+        folio: "#847E74",
+        rowLabel: "#5C5850",
+        numeral: "#111215",
+        leader: "#D5CFC2",
+        iconStroke: "#111215",
+        subNote: "#666158",
+      }
+    : {
+        bg: "#111215",
+        bgOverlay: "rgba(255, 255, 255, 0.012)",
+        borderOuter: "#25262D",
+        borderInner: "#1A1B20",
+        rule: "#25262D",
+        ruleMuted: "#1F2026",
+        folio: "#7E7A72",
+        rowLabel: "#A8A398",
+        numeral: "#F4F0E8",
+        leader: "#25262D",
+        iconStroke: "#DDD8CE",
+        subNote: "#7E7A72",
+      };
+
+  const star = `<path d="M36-6 37.5-2.2 41.5-2 38.3 0.6 39.5 4.6 36 2.2 32.5 4.6 33.7 0.6 30.5-2 34.5-2.2Z" fill="none" stroke="${colors.iconStroke}" stroke-width="1.1" stroke-linejoin="round"/>`;
+  const commit = `<circle cx="36" cy="0" r="3.2" fill="none" stroke="${colors.iconStroke}" stroke-width="1.1"/><path d="M28 0h4.8M40 0h4.8" stroke="${colors.iconStroke}" stroke-width="1.1" stroke-linecap="round"/>`;
+  const pr = `<g fill="none" stroke="${colors.iconStroke}" stroke-width="1.1"><circle cx="33" cy="-4" r="2"/><circle cx="33" cy="4" r="2"/><circle cx="39" cy="-4" r="2"/><path d="M33-2V2M39-2C39 0.8 33 0 33 2"/></g>`;
+  const issue = `<circle cx="36" cy="0" r="4.6" fill="none" stroke="${colors.iconStroke}" stroke-width="1.1"/><circle cx="36" cy="0" r="1.1" fill="${colors.iconStroke}"/>`;
+  const repo = `<path d="M31-4H35L37-2H41V4H31Z" fill="none" stroke="${colors.iconStroke}" stroke-width="1.1" stroke-linejoin="round"/>`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200" role="img" aria-labelledby="title desc">
   <title id="title">GitHub activity for ${USER}</title>
-  <desc id="desc">Stars ${stats.stars}, commits ${stats.commits}, pull requests ${stats.prs}, issues ${stats.issues}, public repos ${stats.repos}. Total contributions ${streak.total} (${streak.totalRange}), current streak ${streak.current} (${streak.currentRange}), longest streak ${streak.longest} (${streak.longestRange}).</desc>
+  <desc id="desc">Stars ${stats.stars}, commits ${stats.commits}, pull requests ${stats.prs}, issues ${stats.issues}, public repos ${stats.repos}. Total contributions ${streak.total}, current streak ${streak.current}, longest streak ${streak.longest}.</desc>
 
   <defs>
-    <clipPath id="frame"><rect width="880" height="200" rx="16" /></clipPath>
+    <clipPath id="frame"><rect width="880" height="200" rx="3" /></clipPath>
   </defs>
 
+  <!-- Physical Newsprint Surface -->
   <g clip-path="url(#frame)">
-    <rect width="880" height="200" fill="#111416" />
-    <path d="M772 0H880V200H826Z" fill="#17302B" />
-    <circle cx="866" cy="14" r="30" fill="#F4C95D" />
-    <circle cx="866" cy="14" r="40" fill="none" stroke="#F4C95D" stroke-width="1.5" stroke-opacity="0.4" />
+    <rect width="880" height="200" fill="${colors.bg}" />
+    <rect width="880" height="200" fill="${colors.bgOverlay}" />
   </g>
 
-  <rect x="1" y="1" width="878" height="198" rx="15" fill="none" stroke="#5E4638" stroke-width="2" />
+  <!-- Broadsheet Hairline Borders -->
+  <rect x="0.5" y="0.5" width="879" height="199" rx="2.5" fill="none" stroke="${colors.borderOuter}" stroke-width="1" />
+  <rect x="4" y="4" width="872" height="192" rx="1.5" fill="none" stroke="${colors.borderInner}" stroke-width="0.75" />
 
-${row(38, star, "Total Stars", fmt(stats.stars))}
-${row(70, commit, "Total Commits", fmt(stats.commits))}
-${row(102, pr, "Pull Requests", fmt(stats.prs))}
-${row(134, issue, "Issues", fmt(stats.issues))}
-${row(166, repo, "Public Repos", fmt(stats.repos))}
+  <!-- Integrated Broadsheet Folio Line -->
+  <text x="24" y="24" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">PUBLIC RECORD</text>
+  <text x="440" y="24" text-anchor="middle" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">ACTIVITY INDEX &amp; CONTRIBUTION LEDGER</text>
+  <text x="856" y="24" text-anchor="end" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">SOURCE: GITHUB API</text>
 
-  <path d="M440 28V172" stroke="#5E4638" stroke-width="2" />
+  <!-- Top Hairline Rule -->
+  <path d="M20 32H860" stroke="${colors.rule}" stroke-width="0.75" />
+
+  <!-- Left Column: Metrics Ledger -->
+${row(56, star, "Total Stars", fmt(stats.stars), colors)}
+${row(84, commit, "Total Commits", fmt(stats.commits), colors)}
+${row(112, pr, "Pull Requests", fmt(stats.prs), colors)}
+${row(140, issue, "Issues Filed", fmt(stats.issues), colors)}
+${row(168, repo, "Public Repositories", fmt(stats.repos), colors)}
+
+  <!-- Vertical Broadside Divider -->
+  <path d="M435 44V182" stroke="${colors.rule}" stroke-width="0.75" />
+
+  <!-- Right Column: Contribution Ledger -->
+  <!-- Column Sub-Dividers -->
+  <path d="M578 52V174" stroke="${colors.ruleMuted}" stroke-width="0.5" />
+  <path d="M720 52V174" stroke="${colors.ruleMuted}" stroke-width="0.5" />
 
   <g text-anchor="middle">
-    <text x="536" y="94" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="800">${streak.total}</text>
-    <text x="536" y="126" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="14">Total / 总计</text>
-    <text x="536" y="152" fill="#87948F" font-family="Segoe UI, Arial, sans-serif" font-size="12">${streak.totalRange}</text>
+    <!-- Total Contributions -->
+    <text x="506" y="102" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">${streak.total}</text>
+    <text x="506" y="128" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">TOTAL</text>
+    <text x="506" y="148" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">All-Time</text>
 
-    <circle cx="664" cy="84" r="37" fill="none" stroke="#F4C95D" stroke-width="3" />
-    <text x="664" y="95" fill="#FF8A4C" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="800">${streak.current}</text>
-    <text x="664" y="140" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="14">Current / 当前</text>
-    <text x="664" y="164" fill="#87948F" font-family="Segoe UI, Arial, sans-serif" font-size="12">${streak.currentRange}</text>
+    <!-- Current Streak -->
+    <text x="649" y="102" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">${streak.current}</text>
+    <text x="649" y="128" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">CURRENT</text>
+    <text x="649" y="148" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">${streak.current === "1" ? "1 Day" : streak.current + " Days"}</text>
 
-    <text x="790" y="94" fill="#FFF4E6" font-family="Trebuchet MS, Arial, sans-serif" font-size="30" font-weight="800">${streak.longest}</text>
-    <text x="790" y="126" fill="#B9C4BF" font-family="Segoe UI, 'Microsoft YaHei', Arial, sans-serif" font-size="14">Longest / 最长</text>
-    <text x="790" y="152" fill="#87948F" font-family="Segoe UI, Arial, sans-serif" font-size="12">${streak.longestRange}</text>
+    <!-- Longest Streak -->
+    <text x="790" y="102" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">${streak.longest}</text>
+    <text x="790" y="128" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">LONGEST</text>
+    <text x="790" y="148" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">${streak.longest === "1" ? "1 Day" : streak.longest + " Days"}</text>
   </g>
+
+  <!-- Bottom Hairline Rule -->
+  <path d="M20 188H860" stroke="${colors.rule}" stroke-width="0.75" />
 </svg>
 `;
 }
@@ -129,6 +182,14 @@ ${row(166, repo, "Public Repos", fmt(stats.repos))}
 const stats = await getStats();
 const streak = await getStreak();
 await mkdir(dirname(OUT), { recursive: true });
-await writeFile(OUT, statCard({ stats, streak }));
-console.log(`wrote ${OUT}`);
+
+// Primary default output: Light newsprint broadsheet card
+await writeFile(OUT, statCard({ stats, streak, theme: "light" }));
+console.log(`wrote primary light card: ${OUT}`);
+
+// Also write dark companion if needed
+const outDark = OUT.endsWith(".svg") ? OUT.slice(0, -4) + "-dark.svg" : OUT + "-dark.svg";
+await writeFile(outDark, statCard({ stats, streak, theme: "dark" }));
+console.log(`wrote dark companion: ${outDark}`);
+
 console.log(JSON.stringify({ stats, streak }, null, 2));
