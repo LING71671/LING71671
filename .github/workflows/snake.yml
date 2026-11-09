@@ -13,24 +13,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # card first: it writes dist/ as the runner user; snk runs in Docker as
-      # root and would make dist/ unwritable if it created the directory first
       - uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Build activity card SVG
+      - name: Build profile broadsheet SVG
         run: node .github/scripts/build-activity-card.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OUT_FILE: dist/stats/activity-card.svg
 
-      - uses: platane/snk@v3
-        with:
-          github_user_name: LING71671
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - name: Commit updated profile graphic
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/profile.svg assets/profile-dark.svg assets/profile-light.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(stats): refresh profile graphics [skip ci]" && git push origin main)
 
       # single deploy: ghaction-github-pages force-pushes build_dir as the
       # branch root, so everything on output must come from this one dist
