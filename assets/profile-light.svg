@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2520, Commits: 2186, PRs: 141, Issues: 69, Repos: 30. Total contributions: 2,507, Current streak: 1, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2520, Commits: 2187, PRs: 141, Issues: 69, Repos: 30. Total contributions: 2,507, Current streak: 1, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -19,16 +19,16 @@
   <rect x="4.5" y="4.5" width="871" height="421" rx="1.5" fill="none" stroke="#E6E0D4" stroke-width="0.75" />
 
   <!-- SECTION 1: BROADSHEET FOLIO & MASTHEAD -->
-  <text x="24" y="24" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">VOL. 2026 · ISSUE № 01</text>
-  <text x="440" y="24" text-anchor="middle" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">AUTONOMOUS SYSTEMS &amp; INTERACTIVE TOOLS</text>
-  <text x="856" y="24" text-anchor="end" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">GITHUB / LING71671</text>
+  <text x="24" y="24" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="2">VOL. 2026 · ISSUE № 01</text>
+  <text x="440" y="24" text-anchor="middle" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="2">AUTONOMOUS SYSTEMS &amp; INTERACTIVE TOOLS</text>
+  <text x="856" y="24" text-anchor="end" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="2">GITHUB / LING71671</text>
 
   <!-- Top Double Rules -->
   <path d="M20 33H860" stroke="#16171A" stroke-width="1" />
   <path d="M20 36H860" stroke="#D5CFC2" stroke-width="0.75" />
 
   <!-- Newspaper Masthead (Refined Thin Serif) -->
-  <text x="448" y="104" text-anchor="middle" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="74" font-weight="300" letter-spacing="16">LING</text>
+  <text x="448" y="104" text-anchor="middle" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="74" font-weight="300" letter-spacing="16">LING</text>
 
   <!-- Masthead Bottom Double Rules -->
   <path d="M20 124H860" stroke="#D5CFC2" stroke-width="0.75" />
@@ -36,7 +36,7 @@
 
   <!-- Editorial Motto & Songti SC Companion -->
   <g text-anchor="middle">
-    <text x="440" y="153" fill="#1A1B1F" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="17" font-style="italic" letter-spacing="1">“Build useful things. Stay curious.”</text>
+    <text x="440" y="153" fill="#1A1B1F" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" font-style="italic" letter-spacing="1">“Build useful things. Stay curious.”</text>
     <text x="440" y="175" fill="#666158" font-family="SimSun, Songti SC, Source Han Serif SC, Noto Serif SC, Microsoft YaHei, serif" font-size="12" letter-spacing="3">保持好奇，构建所思。</text>
   </g>
 
@@ -45,9 +45,9 @@
   <path d="M20 198H860" stroke="#E6E0D4" stroke-width="0.5" />
 
   <!-- SECTION 3: ACTIVITY INDEX & CONTRIBUTION LEDGER -->
-  <text x="24" y="217" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">PUBLIC RECORD</text>
-  <text x="440" y="217" text-anchor="middle" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">ACTIVITY INDEX &amp; CONTRIBUTION LEDGER</text>
-  <text x="856" y="217" text-anchor="end" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">SOURCE: GITHUB API</text>
+  <text x="24" y="217" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">PUBLIC RECORD</text>
+  <text x="440" y="217" text-anchor="middle" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="2">ACTIVITY INDEX &amp; CONTRIBUTION LEDGER</text>
+  <text x="856" y="217" text-anchor="end" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">SOURCE: GITHUB API</text>
 
   <!-- Ledger Header Rule -->
   <path d="M20 226H860" stroke="#D5CFC2" stroke-width="0.75" />
@@ -55,33 +55,33 @@
   <!-- Left Column: Metrics Ledger -->
   <g transform="translate(0 249)">
     <path d="M36-6 37.5-2.2 41.5-2 38.3 0.6 39.5 4.6 36 2.2 32.5 4.6 33.7 0.6 30.5-2 34.5-2.2Z" fill="none" stroke="#111215" stroke-width="1.1" stroke-linejoin="round"/>
-    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">Total Stars</text>
+    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5">Total Stars</text>
     <path d="M195 1H355" stroke="#D5CFC2" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">2.5k</text>
+    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="16">2.5k</text>
   </g>
   <g transform="translate(0 276)">
     <circle cx="36" cy="0" r="3.2" fill="none" stroke="#111215" stroke-width="1.1"/><path d="M28 0h4.8M40 0h4.8" stroke="#111215" stroke-width="1.1" stroke-linecap="round"/>
-    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">Total Commits</text>
+    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5">Total Commits</text>
     <path d="M195 1H355" stroke="#D5CFC2" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">2.2k</text>
+    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="16">2.2k</text>
   </g>
   <g transform="translate(0 303)">
     <g fill="none" stroke="#111215" stroke-width="1.1"><circle cx="33" cy="-4" r="2"/><circle cx="33" cy="4" r="2"/><circle cx="39" cy="-4" r="2"/><path d="M33-2V2M39-2C39 0.8 33 0 33 2"/></g>
-    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">Pull Requests</text>
+    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5">Pull Requests</text>
     <path d="M195 1H355" stroke="#D5CFC2" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">141</text>
+    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="16">141</text>
   </g>
   <g transform="translate(0 330)">
     <circle cx="36" cy="0" r="4.6" fill="none" stroke="#111215" stroke-width="1.1"/><circle cx="36" cy="0" r="1.1" fill="#111215"/>
-    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">Issues Filed</text>
+    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5">Issues Filed</text>
     <path d="M195 1H355" stroke="#D5CFC2" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">69</text>
+    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="16">69</text>
   </g>
   <g transform="translate(0 357)">
     <path d="M31-4H35L37-2H41V4H31Z" fill="none" stroke="#111215" stroke-width="1.1" stroke-linejoin="round"/>
-    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">Public Repositories</text>
+    <text x="56" y="5" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5">Public Repositories</text>
     <path d="M195 1H355" stroke="#D5CFC2" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">30</text>
+    <text x="408" y="5" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="16">30</text>
   </g>
 
   <!-- Vertical Broadside Divider -->
@@ -93,19 +93,19 @@
 
   <g text-anchor="middle">
     <!-- Total Contributions -->
-    <text x="506" y="292" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">2,507</text>
-    <text x="506" y="318" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">TOTAL</text>
-    <text x="506" y="338" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">All-Time</text>
+    <text x="506" y="292" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">2,507</text>
+    <text x="506" y="318" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">TOTAL</text>
+    <text x="506" y="338" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11">All-Time</text>
 
     <!-- Current Streak -->
-    <text x="649" y="292" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">1</text>
-    <text x="649" y="318" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">CURRENT</text>
-    <text x="649" y="338" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">1 Day</text>
+    <text x="649" y="292" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">1</text>
+    <text x="649" y="318" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">CURRENT</text>
+    <text x="649" y="338" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11">1 Day</text>
 
     <!-- Longest Streak -->
-    <text x="790" y="292" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">48</text>
-    <text x="790" y="318" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">LONGEST</text>
-    <text x="790" y="338" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">48 Days</text>
+    <text x="790" y="292" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">48</text>
+    <text x="790" y="318" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">LONGEST</text>
+    <text x="790" y="338" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11">48 Days</text>
   </g>
 
   <!-- Ledger Bottom Rule -->
@@ -117,18 +117,18 @@
     <rect width="14" height="10" rx="1.5"/>
     <path d="M1.5 2l5.5 4 5.5-4"/>
   </g>
-  <text x="46" y="404" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">CORRESPONDENCE</text>
-  <path d="M166 394v13" stroke="#E6E0D4" stroke-width="0.75" />
-  <text x="178" y="404" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11.5" letter-spacing="0.4">belloshehubz@gmail.com</text>
+  <text x="46" y="404" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">CORRESPONDENCE</text>
+  <path d="M182 394v13" stroke="#E6E0D4" stroke-width="0.75" />
+  <text x="196" y="404" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5" letter-spacing="0.4">belloshehubz@gmail.com</text>
 
   <!-- Center Colophon Divider -->
   <path d="M435 391V413" stroke="#D5CFC2" stroke-width="0.75" />
 
   <!-- Right Side: Sentry Attribution & Patron Colophon -->
-  <g transform="translate(456, 393) scale(0.7)">
+  <g transform="translate(454, 393) scale(0.7)">
     <path fill="#111215" d="M13.91 2.505c-.873-1.448-2.972-1.448-3.844 0L6.904 7.92a15.478 15.478 0 0 1 8.53 12.811h-2.221A13.301 13.301 0 0 0 5.784 9.814l-2.926 5.06a7.65 7.65 0 0 1 4.435 5.848H2.194a.365.365 0 0 1-.298-.534l1.413-2.402a5.16 5.16 0 0 0-1.614-.913L.296 19.275a2.182 2.182 0 0 0 .812 2.999 2.24 2.24 0 0 0 1.086.288h6.983a9.322 9.322 0 0 0-3.845-8.318l1.11-1.922a11.47 11.47 0 0 1 4.95 10.24h5.915a17.242 17.242 0 0 0-7.885-15.28l2.244-3.845a.37.37 0 0 1 .504-.13c.255.14 9.75 16.708 9.928 16.9a.365.365 0 0 1-.327.543h-2.287c.029.612.029 1.223 0 1.831h2.297a2.206 2.206 0 0 0 1.922-3.31z"/>
   </g>
-  <text x="482" y="404" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11" letter-spacing="1.5">SENTRY</text>
-  <path d="M536 394v13" stroke="#E6E0D4" stroke-width="0.75" />
-  <text x="548" y="404" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1">COLOPHON · SUPPORTED BY PATRONS</text>
+  <text x="478" y="404" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11" letter-spacing="1.5">SENTRY</text>
+  <path d="M542 394v13" stroke="#E6E0D4" stroke-width="0.75" />
+  <text x="556" y="404" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1">COLOPHON · SUPPORTED BY PATRONS</text>
 </svg>

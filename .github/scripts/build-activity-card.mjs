@@ -3,12 +3,15 @@
 // Colophon / Correspondence strip into ONE continuous, authentic newsprint page.
 // Usage: node .github/scripts/build-activity-card.mjs
 
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { dirname } from "node:path";
 
 const USER = process.env.STATS_USER || "LING71671";
 const TOKEN = process.env.GITHUB_TOKEN || "";
 const OUT_FILE = process.env.OUT_FILE || "";
+
+const FONT_SERIF = "Palatino Linotype, Book Antiqua, Didot, Georgia, serif";
+const FONT_CHINESE = "SimSun, Songti SC, Source Han Serif SC, Noto Serif SC, Microsoft YaHei, serif";
 
 const headers = {
   Accept: "application/vnd.github+json",
@@ -28,51 +31,90 @@ function fmt(n) {
 }
 
 async function getStats() {
-  const user = await api(`/users/${USER}`);
-  let stars = 0;
-  for (let page = 1; ; page++) {
-    const repos = await api(`/users/${USER}/repos?per_page=100&type=owner&page=${page}`);
-    if (!repos.length) break;
-    stars += repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
-    if (repos.length < 100) break;
+  try {
+    const user = await api(`/users/${USER}`);
+    let stars = 0;
+    for (let page = 1; ; page++) {
+      const repos = await api(`/users/${USER}/repos?per_page=100&type=owner&page=${page}`);
+      if (!repos.length) break;
+      stars += repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+      if (repos.length < 100) break;
+    }
+    const commits = (await api(`/search/commits?q=author:${USER}&per_page=1`)).total_count;
+    const prs = (await api(`/search/issues?q=author:${USER}+type:pr&per_page=1`)).total_count;
+    const issues = (await api(`/search/issues?q=author:${USER}+type:issue&per_page=1`)).total_count;
+    return { stars, commits, prs, issues, repos: user.public_repos };
+  } catch (err) {
+    console.warn(`Warning: GitHub API error (${err.message}). Attempting fallback from assets/profile.svg...`);
+    try {
+      const existing = await readFile("assets/profile.svg", "utf8");
+      const m = existing.match(/Stars:\s*(\d+),\s*Commits:\s*(\d+),\s*PRs:\s*(\d+),\s*Issues:\s*(\d+),\s*Repos:\s*(\d+)/);
+      if (m) {
+        return {
+          stars: Number(m[1]),
+          commits: Number(m[2]),
+          prs: Number(m[3]),
+          issues: Number(m[4]),
+          repos: Number(m[5]),
+        };
+      }
+    } catch {}
+    throw err;
   }
-  const commits = (await api(`/search/commits?q=author:${USER}&per_page=1`)).total_count;
-  const prs = (await api(`/search/issues?q=author:${USER}+type:pr&per_page=1`)).total_count;
-  const issues = (await api(`/search/issues?q=author:${USER}+type:issue&per_page=1`)).total_count;
-  return { stars, commits, prs, issues, repos: user.public_repos };
 }
 
 const clean = (s) => String(s).replace(/[<>&"']/g, "").trim();
 
 async function getStreak() {
-  const res = await fetch(`https://streak-stats.demolab.com?user=${USER}`);
-  if (!res.ok) throw new Error(`streak-stats -> ${res.status}`);
-  const svg = await res.text();
-  const texts = [...svg.matchAll(/<text[^>]*>([\s\S]*?)<\/text>/g)]
-    .map((m) => clean(m[1].replace(/<[^>]+>/g, "")))
-    .filter(Boolean);
-  const at = (label) => texts.findIndex((t) => t === label);
-  const num = (t) => /^[\d,]+$/.test(t || "");
-  const iTotal = at("Total Contributions");
-  const iCur = at("Current Streak");
-  const iLong = at("Longest Streak");
-  if (iTotal < 1 || iCur < 0 || iLong < 1) throw new Error("streak labels not found");
-  const total = texts[iTotal - 1];
-  const totalRange = texts[iTotal + 1];
-  const currentRange = texts[iCur + 1];
-  const current = texts[iCur + 2];
-  const longest = texts[iLong - 1];
-  const longestRange = texts[iLong + 1];
-  if (!num(total) || !num(current) || !num(longest)) throw new Error("streak values not numeric");
-  return { total, totalRange, current, currentRange, longest, longestRange };
+  try {
+    const res = await fetch(`https://streak-stats.demolab.com?user=${USER}`, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) throw new Error(`streak-stats -> ${res.status}`);
+    const svg = await res.text();
+    const texts = [...svg.matchAll(/<text[^>]*>([\s\S]*?)<\/text>/g)]
+      .map((m) => clean(m[1].replace(/<[^>]+>/g, "")))
+      .filter(Boolean);
+    const at = (label) => texts.findIndex((t) => t === label);
+    const num = (t) => /^[\d,]+$/.test(t || "");
+    const iTotal = at("Total Contributions");
+    const iCur = at("Current Streak");
+    const iLong = at("Longest Streak");
+    if (iTotal < 1 || iCur < 0 || iLong < 1) throw new Error("streak labels not found");
+    const total = texts[iTotal - 1];
+    const totalRange = texts[iTotal + 1] || "";
+    const currentRange = texts[iCur + 1] || "";
+    const current = texts[iCur + 2];
+    const longest = texts[iLong - 1];
+    const longestRange = texts[iLong + 1] || "";
+    if (!num(total) || !num(current) || !num(longest)) throw new Error("streak values not numeric");
+    return { total, totalRange, current, currentRange, longest, longestRange };
+  } catch (err) {
+    console.warn(`Warning: failed to fetch streak (${err.message}). Attempting fallback from assets/profile.svg...`);
+    try {
+      const existing = await readFile("assets/profile.svg", "utf8");
+      const mTotal = existing.match(/Total contributions:\s*([\d,]+)/);
+      const mCur = existing.match(/Current streak:\s*([\d,]+)/);
+      const mLong = existing.match(/Longest streak:\s*([\d,]+)/);
+      if (mTotal && mCur && mLong) {
+        return {
+          total: mTotal[1],
+          totalRange: "All-Time",
+          current: mCur[1],
+          currentRange: "Recent",
+          longest: mLong[1],
+          longestRange: "Historical",
+        };
+      }
+    } catch {}
+    throw err;
+  }
 }
 
 function row(y, icon, label, value, colors) {
   return `  <g transform="translate(0 ${y})">
     ${icon}
-    <text x="56" y="5" fill="${colors.rowLabel}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="12.5">${label}</text>
+    <text x="56" y="5" fill="${colors.rowLabel}" font-family="${FONT_SERIF}" font-size="12.5">${label}</text>
     <path d="M195 1H355" stroke="${colors.leader}" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="5" text-anchor="end" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="16">${value}</text>
+    <text x="408" y="5" text-anchor="end" fill="${colors.numeral}" font-family="${FONT_SERIF}" font-size="16">${value}</text>
   </g>`;
 }
 
@@ -143,16 +185,16 @@ function broadsheetSvg({ stats, streak, theme = "light" }) {
   <rect x="4.5" y="4.5" width="871" height="421" rx="1.5" fill="none" stroke="${colors.borderInner}" stroke-width="0.75" />
 
   <!-- SECTION 1: BROADSHEET FOLIO & MASTHEAD -->
-  <text x="24" y="24" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">VOL. 2026 · ISSUE № 01</text>
-  <text x="440" y="24" text-anchor="middle" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">AUTONOMOUS SYSTEMS &amp; INTERACTIVE TOOLS</text>
-  <text x="856" y="24" text-anchor="end" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">GITHUB / ${USER}</text>
+  <text x="24" y="24" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="2">VOL. 2026 · ISSUE № 01</text>
+  <text x="440" y="24" text-anchor="middle" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="2">AUTONOMOUS SYSTEMS &amp; INTERACTIVE TOOLS</text>
+  <text x="856" y="24" text-anchor="end" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="2">GITHUB / ${USER}</text>
 
   <!-- Top Double Rules -->
   <path d="M20 33H860" stroke="${colors.ruleThick}" stroke-width="1" />
   <path d="M20 36H860" stroke="${colors.rule}" stroke-width="0.75" />
 
   <!-- Newspaper Masthead (Refined Thin Serif) -->
-  <text x="448" y="104" text-anchor="middle" fill="${colors.masthead}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="74" font-weight="300" letter-spacing="16">LING</text>
+  <text x="448" y="104" text-anchor="middle" fill="${colors.masthead}" font-family="${FONT_SERIF}" font-size="74" font-weight="300" letter-spacing="16">LING</text>
 
   <!-- Masthead Bottom Double Rules -->
   <path d="M20 124H860" stroke="${colors.rule}" stroke-width="0.75" />
@@ -160,8 +202,8 @@ function broadsheetSvg({ stats, streak, theme = "light" }) {
 
   <!-- Editorial Motto & Songti SC Companion -->
   <g text-anchor="middle">
-    <text x="440" y="153" fill="${colors.mottoEnglish}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="17" font-style="italic" letter-spacing="1">“Build useful things. Stay curious.”</text>
-    <text x="440" y="175" fill="${colors.mottoChinese}" font-family="SimSun, Songti SC, Source Han Serif SC, Noto Serif SC, Microsoft YaHei, serif" font-size="12" letter-spacing="3">保持好奇，构建所思。</text>
+    <text x="440" y="153" fill="${colors.mottoEnglish}" font-family="${FONT_SERIF}" font-size="17" font-style="italic" letter-spacing="1">“Build useful things. Stay curious.”</text>
+    <text x="440" y="175" fill="${colors.mottoChinese}" font-family="${FONT_CHINESE}" font-size="12" letter-spacing="3">保持好奇，构建所思。</text>
   </g>
 
   <!-- SECTION 2: TRANSITIONAL BROADSIDE RULE -->
@@ -169,9 +211,9 @@ function broadsheetSvg({ stats, streak, theme = "light" }) {
   <path d="M20 198H860" stroke="${colors.ruleMuted}" stroke-width="0.5" />
 
   <!-- SECTION 3: ACTIVITY INDEX & CONTRIBUTION LEDGER -->
-  <text x="24" y="217" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">PUBLIC RECORD</text>
-  <text x="440" y="217" text-anchor="middle" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="2">ACTIVITY INDEX &amp; CONTRIBUTION LEDGER</text>
-  <text x="856" y="217" text-anchor="end" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">SOURCE: GITHUB API</text>
+  <text x="24" y="217" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1.5">PUBLIC RECORD</text>
+  <text x="440" y="217" text-anchor="middle" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="2">ACTIVITY INDEX &amp; CONTRIBUTION LEDGER</text>
+  <text x="856" y="217" text-anchor="end" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1.5">SOURCE: GITHUB API</text>
 
   <!-- Ledger Header Rule -->
   <path d="M20 226H860" stroke="${colors.rule}" stroke-width="0.75" />
@@ -192,19 +234,19 @@ ${row(357, repo, "Public Repositories", fmt(stats.repos), colors)}
 
   <g text-anchor="middle">
     <!-- Total Contributions -->
-    <text x="506" y="292" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">${streak.total}</text>
-    <text x="506" y="318" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">TOTAL</text>
-    <text x="506" y="338" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">All-Time</text>
+    <text x="506" y="292" fill="${colors.numeral}" font-family="${FONT_SERIF}" font-size="34" font-weight="300">${streak.total}</text>
+    <text x="506" y="318" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1.5">TOTAL</text>
+    <text x="506" y="338" fill="${colors.subNote}" font-family="${FONT_SERIF}" font-size="11">All-Time</text>
 
     <!-- Current Streak -->
-    <text x="649" y="292" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">${streak.current}</text>
-    <text x="649" y="318" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">CURRENT</text>
-    <text x="649" y="338" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">${streak.current === "1" ? "1 Day" : streak.current + " Days"}</text>
+    <text x="649" y="292" fill="${colors.numeral}" font-family="${FONT_SERIF}" font-size="34" font-weight="300">${streak.current}</text>
+    <text x="649" y="318" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1.5">CURRENT</text>
+    <text x="649" y="338" fill="${colors.subNote}" font-family="${FONT_SERIF}" font-size="11">${streak.current === "1" ? "1 Day" : streak.current + " Days"}</text>
 
     <!-- Longest Streak -->
-    <text x="790" y="292" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="34" font-weight="300">${streak.longest}</text>
-    <text x="790" y="318" fill="${colors.folio}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">LONGEST</text>
-    <text x="790" y="338" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11">${streak.longest === "1" ? "1 Day" : streak.longest + " Days"}</text>
+    <text x="790" y="292" fill="${colors.numeral}" font-family="${FONT_SERIF}" font-size="34" font-weight="300">${streak.longest}</text>
+    <text x="790" y="318" fill="${colors.folio}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1.5">LONGEST</text>
+    <text x="790" y="338" fill="${colors.subNote}" font-family="${FONT_SERIF}" font-size="11">${streak.longest === "1" ? "1 Day" : streak.longest + " Days"}</text>
   </g>
 
   <!-- Ledger Bottom Rule -->
@@ -216,20 +258,20 @@ ${row(357, repo, "Public Repositories", fmt(stats.repos), colors)}
     <rect width="14" height="10" rx="1.5"/>
     <path d="M1.5 2l5.5 4 5.5-4"/>
   </g>
-  <text x="46" y="404" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1.5">CORRESPONDENCE</text>
-  <path d="M166 394v13" stroke="${colors.ruleMuted}" stroke-width="0.75" />
-  <text x="178" y="404" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11.5" letter-spacing="0.4">belloshehubz@gmail.com</text>
+  <text x="46" y="404" fill="${colors.subNote}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1.5">CORRESPONDENCE</text>
+  <path d="M182 394v13" stroke="${colors.ruleMuted}" stroke-width="0.75" />
+  <text x="196" y="404" fill="${colors.numeral}" font-family="${FONT_SERIF}" font-size="11.5" letter-spacing="0.4">belloshehubz@gmail.com</text>
 
   <!-- Center Colophon Divider -->
   <path d="M435 391V413" stroke="${colors.rule}" stroke-width="0.75" />
 
   <!-- Right Side: Sentry Attribution & Patron Colophon -->
-  <g transform="translate(456, 393) scale(0.7)">
+  <g transform="translate(454, 393) scale(0.7)">
     <path fill="${colors.numeral}" d="M13.91 2.505c-.873-1.448-2.972-1.448-3.844 0L6.904 7.92a15.478 15.478 0 0 1 8.53 12.811h-2.221A13.301 13.301 0 0 0 5.784 9.814l-2.926 5.06a7.65 7.65 0 0 1 4.435 5.848H2.194a.365.365 0 0 1-.298-.534l1.413-2.402a5.16 5.16 0 0 0-1.614-.913L.296 19.275a2.182 2.182 0 0 0 .812 2.999 2.24 2.24 0 0 0 1.086.288h6.983a9.322 9.322 0 0 0-3.845-8.318l1.11-1.922a11.47 11.47 0 0 1 4.95 10.24h5.915a17.242 17.242 0 0 0-7.885-15.28l2.244-3.845a.37.37 0 0 1 .504-.13c.255.14 9.75 16.708 9.928 16.9a.365.365 0 0 1-.327.543h-2.287c.029.612.029 1.223 0 1.831h2.297a2.206 2.206 0 0 0 1.922-3.31z"/>
   </g>
-  <text x="482" y="404" fill="${colors.numeral}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="11" letter-spacing="1.5">SENTRY</text>
-  <path d="M536 394v13" stroke="${colors.ruleMuted}" stroke-width="0.75" />
-  <text x="548" y="404" fill="${colors.subNote}" font-family="Palatino Linotype, Book Antiqua, Georgia, serif" font-size="9.5" letter-spacing="1">COLOPHON · SUPPORTED BY PATRONS</text>
+  <text x="478" y="404" fill="${colors.numeral}" font-family="${FONT_SERIF}" font-size="11" letter-spacing="1.5">SENTRY</text>
+  <path d="M542 394v13" stroke="${colors.ruleMuted}" stroke-width="0.75" />
+  <text x="556" y="404" fill="${colors.subNote}" font-family="${FONT_SERIF}" font-size="9.5" letter-spacing="1">COLOPHON · SUPPORTED BY PATRONS</text>
 </svg>
 `;
 }
