@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2520, Commits: 2188, PRs: 141, Issues: 69, Repos: 30. Total contributions: 2,507, Current streak: 1, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2523, Commits: 2188, PRs: 141, Issues: 69, Repos: 30. Total contributions: 2,509, Current streak: 2, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -93,14 +93,14 @@
 
   <g text-anchor="middle">
     <!-- Total Contributions -->
-    <text x="506" y="292" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">2,507</text>
+    <text x="506" y="292" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">2,509</text>
     <text x="506" y="318" fill="#7E7A72" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">TOTAL</text>
     <text x="506" y="338" fill="#7E7A72" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11">All-Time</text>
 
     <!-- Current Streak -->
-    <text x="649" y="292" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">1</text>
+    <text x="649" y="292" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">2</text>
     <text x="649" y="318" fill="#7E7A72" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="9.5" letter-spacing="1.5">CURRENT</text>
-    <text x="649" y="338" fill="#7E7A72" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11">1 Day</text>
+    <text x="649" y="338" fill="#7E7A72" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11">2 Days</text>
 
     <!-- Longest Streak -->
     <text x="790" y="292" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="34" font-weight="300">48</text>
