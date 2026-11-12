@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2545, Commits: 2206, PRs: 146, Issues: 68, Repos: 32. Total contributions: 2,589, Current streak: 4, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2546, Commits: 2206, PRs: 146, Issues: 68, Repos: 32. Total contributions: 2,582, Current streak: 4, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -90,7 +90,7 @@
   <!-- Right Column: Contribution Ledger (Hierarchical Editorial Layout) -->
   <!-- Top Hero: Total Contributions -->
   <g text-anchor="middle">
-    <text x="648" y="520" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,589</text>
+    <text x="648" y="520" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,582</text>
     <text x="648" y="554" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5" letter-spacing="2.5">TOTAL CONTRIBUTIONS</text>
     <text x="648" y="580" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5">Sep 9, 2025 – Present</text>
   </g>
