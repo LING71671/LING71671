@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2543, Commits: 2199, PRs: 146, Issues: 69, Repos: 32. Total contributions: 2,582, Current streak: 4, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2545, Commits: 2206, PRs: 146, Issues: 68, Repos: 32. Total contributions: 2,589, Current streak: 4, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -75,7 +75,7 @@
     <circle cx="40" cy="1" r="5.5" fill="none" stroke="#DDD8CE" stroke-width="1.2"/><circle cx="40" cy="1" r="1.4" fill="#DDD8CE"/>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Issues Filed</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">69</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">68</text>
   </g>
   <g transform="translate(0 720)">
     <path d="M34-3.5H39L41.5-1H46V6H34Z" fill="none" stroke="#DDD8CE" stroke-width="1.2" stroke-linejoin="round"/>
@@ -90,7 +90,7 @@
   <!-- Right Column: Contribution Ledger (Hierarchical Editorial Layout) -->
   <!-- Top Hero: Total Contributions -->
   <g text-anchor="middle">
-    <text x="648" y="520" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,582</text>
+    <text x="648" y="520" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,589</text>
     <text x="648" y="554" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5" letter-spacing="2.5">TOTAL CONTRIBUTIONS</text>
     <text x="648" y="580" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5">Sep 9, 2025 – Present</text>
   </g>
