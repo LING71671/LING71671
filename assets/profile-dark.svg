@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2550, Commits: 2240, PRs: 146, Issues: 69, Repos: 32. Total contributions: 2,652, Current streak: 6, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2548, Commits: 2044, PRs: 140, Issues: 68, Repos: 28. Total contributions: 2,652, Current streak: 6, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -63,25 +63,25 @@
     <circle cx="40" cy="1" r="3.8" fill="none" stroke="#DDD8CE" stroke-width="1.2"/><path d="M30 1h6M44 1h6" stroke="#DDD8CE" stroke-width="1.2" stroke-linecap="round"/>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Total Commits</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">2.2k</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">2k</text>
   </g>
   <g transform="translate(0 592)">
     <g fill="none" stroke="#DDD8CE" stroke-width="1.2"><circle cx="36" cy="-3.5" r="2.4"/><circle cx="36" cy="5.5" r="2.4"/><circle cx="44" cy="-3.5" r="2.4"/><path d="M36-1.1V3.1M44-1.1C44 2.2 36 1.1 36 3.1"/></g>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Pull Requests</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">146</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">140</text>
   </g>
   <g transform="translate(0 656)">
     <circle cx="40" cy="1" r="5.5" fill="none" stroke="#DDD8CE" stroke-width="1.2"/><circle cx="40" cy="1" r="1.4" fill="#DDD8CE"/>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Issues Filed</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">69</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">68</text>
   </g>
   <g transform="translate(0 720)">
     <path d="M34-3.5H39L41.5-1H46V6H34Z" fill="none" stroke="#DDD8CE" stroke-width="1.2" stroke-linejoin="round"/>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Public Repositories</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">32</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">28</text>
   </g>
 
   <!-- Vertical Broadside Divider -->
