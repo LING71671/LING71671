@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2548, Commits: 2044, PRs: 140, Issues: 68, Repos: 28. Total contributions: 2,652, Current streak: 6, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2559, Commits: 2044, PRs: 140, Issues: 68, Repos: 28. Total contributions: 2,652, Current streak: 6, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -57,7 +57,7 @@
     <path d="M40-5 41.8-1.5 45.8-1.2 42.8 1.5 43.8 5.5 40 3 36.2 5.5 37.2 1.5 34.2-1.2 38.2-1.5Z" fill="none" stroke="#111215" stroke-width="1.2" stroke-linejoin="round"/>
     <text x="76" y="8" fill="#5C5850" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Total Stars</text>
     <path d="M252 1H348" stroke="#D5CFC2" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">2.5k</text>
+    <text x="408" y="8" text-anchor="end" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">2.6k</text>
   </g>
   <g transform="translate(0 528)">
     <circle cx="40" cy="1" r="3.8" fill="none" stroke="#111215" stroke-width="1.2"/><path d="M30 1h6M44 1h6" stroke="#111215" stroke-width="1.2" stroke-linecap="round"/>
