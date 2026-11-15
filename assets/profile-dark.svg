@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2559, Commits: 2044, PRs: 140, Issues: 68, Repos: 28. Total contributions: 2,652, Current streak: 6, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2561, Commits: 2063, PRs: 140, Issues: 68, Repos: 29. Total contributions: 2,675, Current streak: 7, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -63,7 +63,7 @@
     <circle cx="40" cy="1" r="3.8" fill="none" stroke="#DDD8CE" stroke-width="1.2"/><path d="M30 1h6M44 1h6" stroke="#DDD8CE" stroke-width="1.2" stroke-linecap="round"/>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Total Commits</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">2k</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">2.1k</text>
   </g>
   <g transform="translate(0 592)">
     <g fill="none" stroke="#DDD8CE" stroke-width="1.2"><circle cx="36" cy="-3.5" r="2.4"/><circle cx="36" cy="5.5" r="2.4"/><circle cx="44" cy="-3.5" r="2.4"/><path d="M36-1.1V3.1M44-1.1C44 2.2 36 1.1 36 3.1"/></g>
@@ -81,7 +81,7 @@
     <path d="M34-3.5H39L41.5-1H46V6H34Z" fill="none" stroke="#DDD8CE" stroke-width="1.2" stroke-linejoin="round"/>
     <text x="76" y="8" fill="#B0ABA0" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="17" letter-spacing="0.5">Public Repositories</text>
     <path d="M252 1H348" stroke="#2A2B33" stroke-width="0.75" stroke-dasharray="2 4" />
-    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">28</text>
+    <text x="408" y="8" text-anchor="end" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="28" font-weight="300">29</text>
   </g>
 
   <!-- Vertical Broadside Divider -->
@@ -90,7 +90,7 @@
   <!-- Right Column: Contribution Ledger (Hierarchical Editorial Layout) -->
   <!-- Top Hero: Total Contributions -->
   <g text-anchor="middle">
-    <text x="648" y="520" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,652</text>
+    <text x="648" y="520" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,675</text>
     <text x="648" y="554" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5" letter-spacing="2.5">TOTAL CONTRIBUTIONS</text>
     <text x="648" y="580" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5">Sep 9, 2025 – Present</text>
   </g>
@@ -104,10 +104,10 @@
   <!-- Bottom Streaks: Current & Longest -->
   <g text-anchor="middle">
     <!-- Current Streak -->
-    <text x="546" y="710" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">6</text>
+    <text x="546" y="710" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">7</text>
     <text x="546" y="742" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5" letter-spacing="2">CURRENT STREAK</text>
-    <text x="546" y="766" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13">6 Days</text>
-    <text x="546" y="786" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5">Nov 9 – Nov 14</text>
+    <text x="546" y="766" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13">7 Days</text>
+    <text x="546" y="786" fill="#8E8980" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5">Nov 9 – Nov 15</text>
 
     <!-- Longest Streak -->
     <text x="750" y="710" fill="#F4F0E8" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">48</text>
