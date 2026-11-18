@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2579, Commits: 2074, PRs: 140, Issues: 72, Repos: 32. Total contributions: 2,688, Current streak: 8, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2581, Commits: 2074, PRs: 140, Issues: 72, Repos: 32. Total contributions: 2,688, Current streak: 0, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -104,10 +104,10 @@
   <!-- Bottom Streaks: Current & Longest -->
   <g text-anchor="middle">
     <!-- Current Streak -->
-    <text x="546" y="710" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">8</text>
+    <text x="546" y="710" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">0</text>
     <text x="546" y="742" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5" letter-spacing="2">CURRENT STREAK</text>
-    <text x="546" y="766" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13">8 Days</text>
-    <text x="546" y="786" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5">Nov 9 – Nov 16</text>
+    <text x="546" y="766" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13">0 Days</text>
+    <text x="546" y="786" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5">Nov 18</text>
 
     <!-- Longest Streak -->
     <text x="750" y="710" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">48</text>
