@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="960" viewBox="0 0 880 960" role="img" aria-labelledby="title desc">
   <title id="title">Ling — The Broadsheet Dispatch</title>
-  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2611, Commits: 2083, PRs: 140, Issues: 73, Repos: 34. Total contributions: 2,724, Current streak: 4, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
+  <desc id="desc">Build useful things. Stay curious. 保持好奇，构建所思。 Stars: 2615, Commits: 2084, PRs: 140, Issues: 73, Repos: 34. Total contributions: 2,725, Current streak: 5, Longest streak: 48. Correspondence: belloshehubz@gmail.com.</desc>
 
   <defs>
     <clipPath id="paperFrame">
@@ -90,7 +90,7 @@
   <!-- Right Column: Contribution Ledger (Hierarchical Editorial Layout) -->
   <!-- Top Hero: Total Contributions -->
   <g text-anchor="middle">
-    <text x="648" y="520" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,724</text>
+    <text x="648" y="520" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="66" font-weight="300">2,725</text>
     <text x="648" y="554" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5" letter-spacing="2.5">TOTAL CONTRIBUTIONS</text>
     <text x="648" y="580" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13.5">Sep 9, 2025 – Present</text>
   </g>
@@ -104,10 +104,10 @@
   <!-- Bottom Streaks: Current & Longest -->
   <g text-anchor="middle">
     <!-- Current Streak -->
-    <text x="546" y="710" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">4</text>
+    <text x="546" y="710" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">5</text>
     <text x="546" y="742" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="12.5" letter-spacing="2">CURRENT STREAK</text>
-    <text x="546" y="766" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13">4 Days</text>
-    <text x="546" y="786" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5">Nov 21 – Nov 24</text>
+    <text x="546" y="766" fill="#666158" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="13">5 Days</text>
+    <text x="546" y="786" fill="#847E74" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="11.5">Nov 21 – Nov 25</text>
 
     <!-- Longest Streak -->
     <text x="750" y="710" fill="#111215" font-family="Palatino Linotype, Book Antiqua, Didot, Georgia, serif" font-size="54" font-weight="300">48</text>
