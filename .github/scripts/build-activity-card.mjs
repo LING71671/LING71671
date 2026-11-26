@@ -1,6 +1,4 @@
-// Generates the unified Newspaper Broadsheet for Ling's GitHub Profile.
-// Consolidates Masthead, Editorial Motto, Activity Index Ledger, and
-// Colophon / Correspondence strip into ONE continuous, authentic newsprint page.
+// Refreshes Ling's profile README activity and generates the broadsheet assets.
 // Usage: node .github/scripts/build-activity-card.mjs
 
 import { mkdir, writeFile, readFile } from "node:fs/promises";
@@ -74,7 +72,7 @@ async function getStreak() {
       .map((m) => clean(m[1].replace(/<[^>]+>/g, "")))
       .filter(Boolean);
     const at = (label) => texts.findIndex((t) => t === label);
-    const num = (t) => /^[\d,]+$/.test(t || "");
+    const num = (t) => /^\d+(?:,\d{3})*$/.test(t || "");
     const iTotal = at("Total Contributions");
     const iCur = at("Current Streak");
     const iLong = at("Longest Streak");
@@ -91,17 +89,20 @@ async function getStreak() {
     console.warn(`Warning: failed to fetch streak (${err.message}). Attempting fallback from assets/profile.svg...`);
     try {
       const existing = await readFile("assets/profile.svg", "utf8");
-      const mTotal = existing.match(/Total contributions:\s*([\d,]+)/);
-      const mCur = existing.match(/Current streak:\s*([\d,]+)/);
-      const mLong = existing.match(/Longest streak:\s*([\d,]+)/);
+      const mTotal = existing.match(/Total contributions:\s*(\d+(?:,\d{3})*)/);
+      const mCur = existing.match(/Current streak:\s*(\d+(?:,\d{3})*)/);
+      const mLong = existing.match(/Longest streak:\s*(\d+(?:,\d{3})*)/);
       if (mTotal && mCur && mLong) {
+        // The published broadsheet stores date ranges in these three text nodes.
+        const rangeAt = (x, y) =>
+          existing.match(new RegExp(`<text x="${x}" y="${y}"[^>]*>([^<]+)</text>`))?.[1];
         return {
           total: mTotal[1],
-          totalRange: "All-Time Record",
+          totalRange: rangeAt(648, 580) || "All-Time Record",
           current: mCur[1],
-          currentRange: "Recent Period",
+          currentRange: rangeAt(546, 786) || "Recent Period",
           longest: mLong[1],
-          longestRange: "Historical Record",
+          longestRange: rangeAt(750, 786) || "Historical Record",
         };
       }
     } catch {}
@@ -289,8 +290,42 @@ ${row(720, repo, "Public Repositories", fmt(stats.repos), colors)}
 `;
 }
 
+async function refreshReadme(stats, streak) {
+  const readme = await readFile("README.md", "utf8");
+  const activityBlock = /<!-- activity:start -->\r?\n[\s\S]*?\r?\n<!-- activity:end -->/;
+  if (!activityBlock.test(readme)) throw new Error("README activity markers are missing");
+
+  const number = new Intl.NumberFormat("en-US");
+  const metrics = [
+    `**${number.format(stats.stars)}** stars`,
+    `**${number.format(stats.commits)}** commits`,
+    `**${number.format(stats.prs)}** pull requests`,
+    `**${number.format(stats.issues)}** issues filed`,
+    `**${number.format(stats.repos)}** public repositories`,
+  ];
+  const duration = (days) => `${days} ${days === "1" ? "day" : "days"}`;
+  const dateRange = (range) => {
+    const date = range.replace(/-/g, "–");
+    return /^[A-Za-z0-9,. –]+$/.test(date) ? ` (${date})` : "";
+  };
+  const contributions = `**${streak.total}** total contributions${dateRange(streak.totalRange)}`;
+  const current = `Current streak **${duration(streak.current)}**${dateRange(streak.currentRange)}`;
+  const longest = `Longest streak **${duration(streak.longest)}**${dateRange(streak.longestRange)}`;
+  const lineEnding = readme.includes("\r\n") ? "\r\n" : "\n";
+  const activity = [
+    "<!-- activity:start -->",
+    `${metrics.join(" · ")}\\`,
+    `${contributions}\\`,
+    `${current} · ${longest}`,
+    "<!-- activity:end -->",
+  ].join(lineEnding);
+
+  await writeFile("README.md", readme.replace(activityBlock, activity));
+}
+
 const stats = await getStats();
 const streak = await getStreak();
+await refreshReadme(stats, streak);
 
 // 1. Primary BroadSheet outputs for assets/
 await mkdir("assets", { recursive: true });
