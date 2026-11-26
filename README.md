@@ -9,7 +9,7 @@ Autonomous systems & interactive tools
   <source media="(max-width: 767px) and (prefers-color-scheme: dark)" srcset="./assets/activity/compact-dark.png" width="360" />
   <source media="(max-width: 767px) and (prefers-color-scheme: light)" srcset="./assets/activity/compact-light.png" width="360" />
   <source media="(prefers-color-scheme: dark)" srcset="./assets/activity/wide-dark.png" />
-  <img src="./assets/activity/wide-light.png" width="800" alt="Total contributions 2,613 (Sep 9, 2025 – Present). Current streak 6 days (Nov 21 – Nov 26). Longest streak 27 days (May 26 – Jun 21). 2,620 stars, 2,098 commits, 141 pull requests, 73 issues filed, 34 public repositories." />
+  <img src="./assets/activity/wide-light.png" width="800" alt="Total contributions 2,610 (Sep 9, 2025 – Present). Current streak 6 days (Nov 21 – Nov 26). Longest streak 27 days (May 26 – Jun 21). 2,620 stars, 2,099 commits, 141 pull requests, 73 issues filed, 34 public repositories." />
 </picture>
 <!-- activity:end -->
 
