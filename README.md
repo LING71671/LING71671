@@ -1,13 +1,18 @@
-### Ling
+## Ling
 
 Autonomous systems & interactive tools
 
-#### GitHub activity
+### GitHub activity
 
 <!-- activity:start -->
-**2,620** stars · **2,096** commits · **141** pull requests · **73** issues filed · **34** public repositories\
-**2,610** total contributions (Sep 9, 2025 – Present)\
-Current streak **6 days** (Nov 21 – Nov 26) · Longest streak **27 days** (May 26 – Jun 21)
+<picture>
+  <source media="(max-width: 767px)" srcset="./assets/activity/compact-dark.png" width="360" />
+  <img src="./assets/activity/wide-dark.png#gh-dark-mode-only" width="800" alt="Total contributions 2,610 (Sep 9, 2025 – Present). Current streak 6 days (Nov 21 – Nov 26). Longest streak 27 days (May 26 – Jun 21). 2,620 stars, 2,096 commits, 141 pull requests, 73 issues filed, 34 public repositories." />
+</picture>
+<picture>
+  <source media="(max-width: 767px)" srcset="./assets/activity/compact-light.png" width="360" />
+  <img src="./assets/activity/wide-light.png#gh-light-mode-only" width="800" alt="Total contributions 2,610 (Sep 9, 2025 – Present). Current streak 6 days (Nov 21 – Nov 26). Longest streak 27 days (May 26 – Jun 21). 2,620 stars, 2,096 commits, 141 pull requests, 73 issues filed, 34 public repositories." />
+</picture>
 <!-- activity:end -->
 
 [belloshehubz@gmail.com](mailto:belloshehubz@gmail.com)

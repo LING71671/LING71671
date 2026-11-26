@@ -3,6 +3,7 @@
 
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { dirname } from "node:path";
+import { renderActivityOverview } from "./render-activity-overview.mjs";
 
 const USER = process.env.STATS_USER || "LING71671";
 const TOKEN = process.env.GITHUB_TOKEN || "";
@@ -290,33 +291,15 @@ ${row(720, repo, "Public Repositories", fmt(stats.repos), colors)}
 `;
 }
 
-async function refreshReadme(stats, streak) {
+async function refreshReadme(overview) {
   const readme = await readFile("README.md", "utf8");
   const activityBlock = /<!-- activity:start -->\r?\n[\s\S]*?\r?\n<!-- activity:end -->/;
   if (!activityBlock.test(readme)) throw new Error("README activity markers are missing");
 
-  const number = new Intl.NumberFormat("en-US");
-  const metrics = [
-    `**${number.format(stats.stars)}** stars`,
-    `**${number.format(stats.commits)}** commits`,
-    `**${number.format(stats.prs)}** pull requests`,
-    `**${number.format(stats.issues)}** issues filed`,
-    `**${number.format(stats.repos)}** public repositories`,
-  ];
-  const duration = (days) => `${days} ${days === "1" ? "day" : "days"}`;
-  const dateRange = (range) => {
-    const date = range.replace(/-/g, "–");
-    return /^[A-Za-z0-9,. –]+$/.test(date) ? ` (${date})` : "";
-  };
-  const contributions = `**${streak.total}** total contributions${dateRange(streak.totalRange)}`;
-  const current = `Current streak **${duration(streak.current)}**${dateRange(streak.currentRange)}`;
-  const longest = `Longest streak **${duration(streak.longest)}**${dateRange(streak.longestRange)}`;
   const lineEnding = readme.includes("\r\n") ? "\r\n" : "\n";
   const activity = [
     "<!-- activity:start -->",
-    `${metrics.join(" · ")}\\`,
-    `${contributions}\\`,
-    `${current} · ${longest}`,
+    ...overview,
     "<!-- activity:end -->",
   ].join(lineEnding);
 
@@ -325,7 +308,7 @@ async function refreshReadme(stats, streak) {
 
 const stats = await getStats();
 const streak = await getStreak();
-await refreshReadme(stats, streak);
+await refreshReadme(await renderActivityOverview(stats, streak));
 
 // 1. Primary BroadSheet outputs for assets/
 await mkdir("assets", { recursive: true });
