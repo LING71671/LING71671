@@ -8,12 +8,18 @@ import { promisify } from "node:util";
 const run = promisify(execFile);
 const directory = "assets/activity";
 const palettes = {
-  dark: { foreground: "#e6edf3", muted: "#9198a1", accent: "#3fb950", border: "#30363d" },
-  light: { foreground: "#1f2328", muted: "#59636e", accent: "#1a7f37", border: "#d1d9e0" },
+  dark: {
+    foreground: "#e6edf3", muted: "#9198a1", accent: "#3fb950", border: "#30363d",
+    surface: "#161b22", layer: "#1c232d", shadow: "rgba(0, 0, 0, .38)",
+  },
+  light: {
+    foreground: "#1f2328", muted: "#59636e", accent: "#1a7f37", border: "#d1d9e0",
+    surface: "#f6f8fa", layer: "#eaeef2", shadow: "rgba(31, 35, 40, .16)",
+  },
 };
 const layouts = {
-  wide: { width: 800, height: 204 },
-  compact: { width: 360, height: 338 },
+  wide: { width: 800, height: 238 },
+  compact: { width: 360, height: 370 },
 };
 
 const styles = `
@@ -22,10 +28,15 @@ const styles = `
   main { padding: 3px 0 5px; overflow: hidden; }
   dl, dd { margin: 0; }
   .contributions { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 32px; }
+  .total { position: relative; isolation: isolate; margin: 0 10px 10px 0; padding: 10px 16px 12px; }
+  .total::before, .total::after { position: absolute; inset: 0; content: ''; border: 1px solid var(--border); border-radius: 10px; }
+  .total::before { z-index: -2; background: var(--layer); transform: translate(8px, 8px); box-shadow: 1px 5px 9px var(--shadow); }
+  .total::after { z-index: -1; background: var(--surface); }
   .label { font-size: 15px; font-weight: 600; }
   .number { font-variant-numeric: tabular-nums; font-weight: 700; }
   .total .number { font-size: 60px; letter-spacing: -.03em; }
   .headline { display: flex; align-items: baseline; gap: 6px; margin-top: 3px; line-height: 1; min-height: 60px; }
+  .streak { padding-top: 10px; }
   .streak .headline { align-items: end; padding-bottom: 4px; }
   .streak .number { font-size: 42px; letter-spacing: -.025em; }
   .current .number { color: var(--accent); }
@@ -38,10 +49,11 @@ const styles = `
   .metrics div { display: flex; flex-direction: column; }
   .metrics .number { order: -1; font-size: 23px; line-height: 1.15; }
   .metrics .label { display: block; margin-top: 4px; color: var(--muted); font-size: 14px; font-weight: 400; }
-  .compact .contributions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
-  .compact .total { grid-column: 1 / -1; }
+  .compact .contributions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; }
+  .compact .total { grid-column: 1 / -1; margin-right: 13px; }
   .compact .total .number { font-size: 49px; }
   .compact .headline { min-height: 0; }
+  .compact .streak { padding-top: 0; }
   .compact .streak .number { font-size: 30px; }
   .compact .streak .headline { padding-bottom: 0; }
   .compact .period { margin-top: 5px; font-size: 14px; }
@@ -92,8 +104,9 @@ function documentHtml({ metrics, highlights }, colors, layout, width) {
     <dd class="number">${value}</dd>
   </div>`).join("\n");
 
+  const properties = Object.entries(colors).map(([name, value]) => `--${name}: ${value}`).join("; ");
   return `<!doctype html>
-<html lang="en" style="--foreground: ${colors.foreground}; --muted: ${colors.muted}; --accent: ${colors.accent}; --border: ${colors.border}">
+<html lang="en" style="${properties}">
 <meta charset="utf-8">
 <title>GitHub activity</title>
 <style>${styles}</style>
@@ -133,10 +146,12 @@ export async function renderActivityOverview(stats, streak) {
     `${label} ${value}${unit ? ` ${unit}` : ""}${date ? ` (${date})` : ""}`);
   const metrics = data.metrics.map(({ label, value }) => `${value} ${label.toLowerCase()}`);
   const alt = `${highlights.join(". ")}. ${metrics.join(", ")}.`;
-  return Object.keys(palettes).flatMap((theme) => [
+  return [
     "<picture>",
-    `  <source media="(max-width: 767px)" srcset="./${directory}/compact-${theme}.png" width="360" />`,
-    `  <img src="./${directory}/wide-${theme}.png#gh-${theme}-mode-only" width="800" alt="${alt}" />`,
+    `  <source media="(max-width: 767px) and (prefers-color-scheme: dark)" srcset="./${directory}/compact-dark.png" width="360" />`,
+    `  <source media="(max-width: 767px) and (prefers-color-scheme: light)" srcset="./${directory}/compact-light.png" width="360" />`,
+    `  <source media="(prefers-color-scheme: dark)" srcset="./${directory}/wide-dark.png" />`,
+    `  <img src="./${directory}/wide-light.png" width="${layouts.wide.width}" alt="${alt}" />`,
     "</picture>",
-  ]);
+  ];
 }
