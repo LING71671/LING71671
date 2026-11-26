@@ -15,4 +15,4 @@ Autonomous systems & interactive tools
 
 [belloshehubz@gmail.com](mailto:belloshehubz@gmail.com)
 
-<sub>Supported by sponsors.</sub>
+<sub>Sponsored by Sentry.</sub>
