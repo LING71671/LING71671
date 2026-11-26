@@ -10,11 +10,11 @@ const directory = "assets/activity";
 const palettes = {
   dark: {
     foreground: "#e6edf3", muted: "#9198a1", accent: "#3fb950", border: "#30363d",
-    surface: "#161b22", layer: "#1c232d", shadow: "rgba(0, 0, 0, .38)",
+    surface: "#161b22", layer: "#242e3b", edge: "#3d4a59", shadow: "rgba(0, 0, 0, .5)",
   },
   light: {
     foreground: "#1f2328", muted: "#59636e", accent: "#1a7f37", border: "#d1d9e0",
-    surface: "#f6f8fa", layer: "#eaeef2", shadow: "rgba(31, 35, 40, .16)",
+    surface: "#f6f8fa", layer: "#e2e8ee", edge: "#c4ced8", shadow: "rgba(31, 35, 40, .2)",
   },
 };
 const layouts = {
@@ -28,9 +28,9 @@ const styles = `
   main { padding: 3px 0 5px; overflow: hidden; }
   dl, dd { margin: 0; }
   .contributions { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 32px; }
-  .total { position: relative; isolation: isolate; margin: 0 10px 10px 0; padding: 10px 16px 12px; }
+  .total { position: relative; isolation: isolate; margin: 0 16px 13px 0; padding: 10px 16px 12px; }
   .total::before, .total::after { position: absolute; inset: 0; content: ''; border: 1px solid var(--border); border-radius: 10px; }
-  .total::before { z-index: -2; background: var(--layer); transform: translate(8px, 8px); box-shadow: 1px 5px 9px var(--shadow); }
+  .total::before { z-index: -2; background: var(--layer); border-color: var(--edge); transform: translate(13px, 11px); box-shadow: 2px 7px 12px var(--shadow); }
   .total::after { z-index: -1; background: var(--surface); }
   .label { font-size: 15px; font-weight: 600; }
   .number { font-variant-numeric: tabular-nums; font-weight: 700; }
@@ -50,7 +50,7 @@ const styles = `
   .metrics .number { order: -1; font-size: 23px; line-height: 1.15; }
   .metrics .label { display: block; margin-top: 4px; color: var(--muted); font-size: 14px; font-weight: 400; }
   .compact .contributions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; }
-  .compact .total { grid-column: 1 / -1; margin-right: 13px; }
+  .compact .total { grid-column: 1 / -1; margin-right: 20px; }
   .compact .total .number { font-size: 49px; }
   .compact .headline { min-height: 0; }
   .compact .streak { padding-top: 0; }
@@ -133,7 +133,7 @@ export async function renderActivityOverview(stats, streak) {
           "--default-background-color=00000000", "--force-device-scale-factor=2",
           `--window-size=${width},${height}`, `--screenshot=${png}`, pathToFileURL(html).href,
         ], { timeout: 15000, windowsHide: true });
-        await copyFile(png, resolve(directory, `${layout}-${theme}.png`));
+        await copyFile(png, resolve(directory, `stacked-${layout}-${theme}.png`));
       }
     }
   } finally {
@@ -148,10 +148,10 @@ export async function renderActivityOverview(stats, streak) {
   const alt = `${highlights.join(". ")}. ${metrics.join(", ")}.`;
   return [
     "<picture>",
-    `  <source media="(max-width: 767px) and (prefers-color-scheme: dark)" srcset="./${directory}/compact-dark.png" width="360" />`,
-    `  <source media="(max-width: 767px) and (prefers-color-scheme: light)" srcset="./${directory}/compact-light.png" width="360" />`,
-    `  <source media="(prefers-color-scheme: dark)" srcset="./${directory}/wide-dark.png" />`,
-    `  <img src="./${directory}/wide-light.png" width="${layouts.wide.width}" alt="${alt}" />`,
+    `  <source media="(max-width: 767px) and (prefers-color-scheme: dark)" srcset="./${directory}/stacked-compact-dark.png" width="360" />`,
+    `  <source media="(max-width: 767px) and (prefers-color-scheme: light)" srcset="./${directory}/stacked-compact-light.png" width="360" />`,
+    `  <source media="(prefers-color-scheme: dark)" srcset="./${directory}/stacked-wide-dark.png" />`,
+    `  <img src="./${directory}/stacked-wide-light.png" width="${layouts.wide.width}" alt="${alt}" />`,
     "</picture>",
   ];
 }
