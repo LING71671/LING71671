@@ -1,7 +1,6 @@
 ### Ling
 
-Autonomous systems & interactive tools\
-Build useful things. Stay curious. · 保持好奇，构建所思。
+Autonomous systems & interactive tools
 
 #### GitHub activity
 
